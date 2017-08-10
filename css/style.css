@@ -1,0 +1,24 @@
+body {background-color: #333333;
+  
+  position: relative;
+
+}
+#jumbo {
+  border-radius: 15px;
+  margin-top: 60px;
+}
+
+.header {
+	
+	width: 100%;
+	background: #222;
+	z-index: 10;
+}
+.jumbotron{
+  border-radius: 15px;
+}
+#footer
+{
+  color: white;
+  text-align: center;
+}
