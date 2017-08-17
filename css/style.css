@@ -95,8 +95,21 @@ body {
     transform: rotate(360deg);
   }
 }
+.img-thumbnail{
+  border: 1px none;
+  background: transparent;
+  box-shadow: none;
+}
+ul {list-style-type: none;
+ line-height: 50px;
+    margin: 0;
+    padding: 0;
+    
+    display: inline-block;
+    *display: inline;
+    zoom: 1
+}
 @media(max-width: 768px){
-
 h1 {
     font-size: 2em;
     line-height: 42px;
