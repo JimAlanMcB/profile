@@ -32,6 +32,8 @@
 //         log: function() { }
 //     };
 // }
+
+
 $('#homeBtn').click(function(element){
 $('#about, #portfolio, #contact, #skills').fadeOut('slow').promise().done(function(){
 	$('#home').fadeIn('slow');
