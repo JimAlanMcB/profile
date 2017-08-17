@@ -14,20 +14,7 @@ body {
   position: absolute;
   left: 90%;
   top: 2%;
-}
- @media (max-width: 768px) {
-.defaultbtn{
-  position: absolute;
-    left: 85%;
-    top: 2%;
-    /* width: 20%; */
-
-
- }
-}  
-
-.btnstyle{
-    border-radius: 0px !important; 
+   border-radius: 0px !important; 
     background-color: transparent;
     color: #e6e4ec;
     /* overflow: visible; */
@@ -36,8 +23,39 @@ body {
     text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 2px;
-
 }
+ @media (max-width: 768px) {
+.defaultbtn{
+  position: absolute;
+    left: 85%;
+    top: 2%;
+     border-radius: 0px !important; 
+    background-color: transparent;
+    color: #e6e4ec;
+    /* overflow: visible; */
+    border: 1px solid rgba(238,232,255,0.57);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    /* width: 20%; */
+
+
+ }
+}  
+
+.btnstyle{ 
+    border-radius: 0px !important; 
+    background-color: transparent;
+    color: #e6e4ec;
+     overflow: visible; 
+    border: 1px solid rgba(238,232,255,0.57);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+
+} 
  #image { 
   position: fixed;
   top: 30%;
