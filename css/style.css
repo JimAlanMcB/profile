@@ -18,18 +18,18 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-#image {
-  position: absolute;
+ #image { 
+  position: fixed;
   top: 30%;
-  left: 50%;
-  opacity: 0.5;
+  left: 40%;
+  opacity: 1;
   width: 2000px;
   height: 2000px;
-  margin: -60px 0 0 -60px;
+  /* margin: -60px 0 0 -60px; */
   -webkit-animation: spin 10s linear infinite;
   -moz-animation: spin 10s linear infinite;
   animation: spin 50s linear infinite;
-}
+} 
 @-moz-keyframes spin {
   100% {
     -moz-transform: rotate(360deg);
@@ -59,8 +59,8 @@ body {
 }
 #home {
   position: absolute;
-  /* left: 100px;  */
-  top: 40%;
+  left: 10%;
+  top: 30%;
   width: 45%;
   /* min-width: 500px; */
 
@@ -82,8 +82,8 @@ body {
 }
 #about {
   position: absolute;
-  /* left: 100px; */
-  top: 40%;
+  left: 10%;
+  top: 30%;
   width: 45%;
   /* min-width: 500px; */
 
@@ -106,8 +106,8 @@ body {
 }
 #contact {
   position: absolute;
-  /* left: 100px; */
-  top: 40%;
+  left: 10%;
+  top: 30%;
   width: 45%;
   /* min-width: 500px; */
 
@@ -131,8 +131,8 @@ body {
 }
 #skills {
   position: absolute;
-  /* left: 100px; */
-  top: 40%;
+  left: 10%;
+  top: 30%;
   width: 45%;
   /* min-width: 500px; */
 
@@ -156,8 +156,8 @@ body {
 }
 #portfolio {
   position: absolute;
-  /* left: 100px; */
-  top: 40%;
+  left: 10%;
+  top: 30%;
   width: 45%;
   /* min-width: 500px; */
   margin-top: 10px;
