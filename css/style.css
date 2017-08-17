@@ -1,24 +1,294 @@
-body {background-color: #333333;
-  
+html,
+body {
+  height: 100%;
+}
+body {
+  background: rgba(25, 25, 112, 1);
+  /* background-image: linear-gradient(
+      rgba(7, 21, 121, 0.65),
+      rgba(12, 130, 255, 0.59)
+    ),
+    url(bg.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   position: relative;
-
+  font-family: 'Raleway', sans-serif;
+  padding-top: 40px;
+  width: 100%;
+  box-sizing: border-box;
 }
+#image {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  opacity: 0.5;
+  width: 2000px;
+  height: 2000px;
+  margin: -60px 0 0 -60px;
+  -webkit-animation: spin 10s linear infinite;
+  -moz-animation: spin 10s linear infinite;
+  animation: spin 50s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+    left: 0;
+    top: 26%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+#home {
+  position: absolute;
+  /* left: 100px;  */
+  top: 40%;
+  width: 45%;
+  /* min-width: 500px; */
+
+  background-color: transparent;
+  color: white;
+  text-align: left;
+
+  /*background: rgba(25, 25, 112, 0.5);*/
+}
+@media (max-width: 768px) {
+  #about {
+    left: 0;
+    top: 26%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+#about {
+  position: absolute;
+  /* left: 100px; */
+  top: 40%;
+  width: 45%;
+  /* min-width: 500px; */
+
+  margin-top: 10px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  /*background: rgba(25, 25, 112, 0.5);*/
+  display: none;
+}
+@media (max-width: 768px) {
+  #contact {
+    left: 0;
+    top: 26%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+#contact {
+  position: absolute;
+  /* left: 100px; */
+  top: 40%;
+  width: 45%;
+  /* min-width: 500px; */
+
+  margin-top: 10px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+
+  /*background: rgba(25, 25, 112, 0.5);*/
+  display: none;
+}
+@media (max-width: 768px) {
+  #skills {
+    left: 0;
+    top: 26%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+#skills {
+  position: absolute;
+  /* left: 100px; */
+  top: 40%;
+  width: 45%;
+  /* min-width: 500px; */
+
+  margin-top: 10px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+
+  /*background: rgba(25, 25, 112, 0.5);*/
+  display: none;
+}
+@media (max-width: 768px) {
+  #portfolio {
+    left: 0;
+    top: 26%;
+    width: 100%;
+    min-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+#portfolio {
+  position: absolute;
+  /* left: 100px; */
+  top: 40%;
+  width: 45%;
+  /* min-width: 500px; */
+  margin-top: 10px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+
+  /*background: rgba(25, 25, 112, 0.5);*/
+  display: none;
+}
+div {
+  display: block;
+}
+p {
+    max-width: 750px;
+    font-weight: 100;
+    line-height: 34px;
+    margin-top: 7px;
+    font-size: 20px;
+    color: rgba(255,255,255,0.84);
+}
+
 #jumbo {
-  border-radius: 15px;
-  margin-top: 60px;
+  margin-top: 10px;
+  background-color: transparent;
+  color: white;
+  text-align: left;
+  background: rgba(25, 25, 112, 0.5);
 }
 
-.header {
-	
-	width: 100%;
-	background: #222;
-	z-index: 10;
+#nav-top {
+  padding: 16px; 
+  background: rgba(25, 25, 112, 0.5);
+  border: 0px solid rgba(25, 100, 180, .5); 
+  font-size: 30px;
 }
-.jumbotron{
+.header {
+  padding: 60px;
+  width: 100%;
+  z-index: 10;
+}
+.jumbotron {
   border-radius: 15px;
 }
-#footer
-{
+#footer {
   color: white;
   text-align: center;
+}
+
+/* navbar */
+.navbar-default {
+  background-color: transparent;
+  /* border-width: .5px; */
+  /* border-color: rgba(160, 187, 253, 0.63); */
+}
+/* Title */
+.navbar-default .navbar-brand {
+  color: rgb(168, 194, 255);
+  font-size: 60px;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: rgb(0, 171, 255);
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+  color: rgb(168, 194, 255);
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: rgb(0, 171, 255);
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: rgb(0, 171, 255);
+  background-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: rgb(0, 171, 255);
+  background-color: #d5d5d5;
+}
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: #777;
+  border-bottom-color: #777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #333;
+  border-bottom-color: #333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+  border-top-color: #555;
+  border-bottom-color: #555;
+}
+/* Mobile version */
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ccc;
+}
+
+#port-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+}
+a:hover {
+  color: rgb(0, 171, 255);
+}
+h1 {
+  font-size: 50px;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: rgb(0, 171, 255);
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+  }
 }

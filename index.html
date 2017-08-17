@@ -1,142 +1,164 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
+
   <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css'>
-<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-      <link rel="stylesheet" href="css/style.css">
 
-  
 </head>
 
 <body>
   <div class="header">
-  <div class="container">
+    <img src="circle.png" id="image"></img>
+    <div class="container" id="main">
 
-    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
 
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav" id="nav-toggle">
+        <div class="container-fluid" id="nav-top">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav" id="nav-toggle">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Jim McBrayer</a>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+
+
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="nav navbar-nav">
+              <!--  <li><a href="#">Test1</a></li> !-->
+              <!--  <li><a href="#">Test2</a></li> !-->
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <!--class="scroll-link" data-id="aboutme"-->
+              <li><a href="#" id="homeBtn" class ="scroll-link">Home</a></li>
+              <li><a href="#" id="aboutBtn" class ="scroll-link">About</a></li>
+              <li><a href="#" id="portBtn" class="scroll-link" >Portfolio</a></li>
+              <li><a href="#" id="contactBtn" class="scroll-link" >Contact</a></li>
+            </ul>
+
+          </div>
+          <!-- /.navbar-collapse -->
+
+
         </div>
+        <!-- /.container -->
+      </nav>
 
-
-        <div class="collapse navbar-collapse" id="main-nav">
-          <ul class="nav navbar-nav">
-          <!--  <li><a href="#">Test1</a></li> !-->
-          <!--  <li><a href="#">Test2</a></li> !-->
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="scroll-link" data-id="aboutme">About</a></li>
-            <li><a href="#" class="scroll-link" data-id="port">Portfolio</a></li>
-            <li><a href="#" class="scroll-link" data-id="contactme">Contact</a></li>
-          </ul>
-
-        </div>
-        <!-- /.navbar-collapse -->
-
-
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
-
-    <div class="jumbotron" id="jumbo">
-      <div id="aboutme"></div>
-      <!--about me -->
-      <h1>.about</h1>
-
-      <em>"Try not, do or do not, there is no try."</em>
-      <p>Note: Need to make the Nav bar useable on mobile. Works on PC but not on Mobile. Looks like the function to close the Nav bar on mobile is working, however it does not scroll. </p>
-      <p>pictures of me</p>
-      <p>
-        <div class="well"><img src="http://i64.tinypic.com/2vrwe2v.png"></div>
-      </p>
-    </div>
-
-    <div class="jumbotron" id="port">
-      <!-- Portfolio -->
-      <h1>.portfolio</h1>
-      <p>.current projects</p>
-      <p>
-        <div class="thumbnail">
-          <a href="https://codepen.io/alancode/full/MvKJPK/" target="_blank">Random Quote Machine |</a>
-          <a href="https://codepen.io/alancode/full/gxMrrO/" target="_blank">Weather App |</a>
-          <a href="https://codepen.io/alancode/full/ZJOaVg/" target="_blank">Wiki Viewer |</a>
-          <a href="https://codepen.io/alancode/full/zdBRrR/" target="_blank">Twitch JSON API |</a>
-        </div>
-    </div>
-    <div class="jumbotron">
-      <h1>.another area
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      .
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      </h1>
-      <p> some things</p>
-    </div>
-    <div id="contactme">
-      <div class="jumbotron">
-        <!-- contact -->
-        <h1>.contact</h1>
-        <p> Some info to contact me</p>
-        <p>
-          <a class="btn btn-social-icon btn-lg btn-twitter" href="https://www.twitter.com/alancode" target="_blank">
-            <span class="fa fa-twitter"></span></a>
-          <a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.twitter.com/alancode" target="_blank">
-            <span class="fa fa-facebook"></span></a>
-          <a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.twitter.com/alancode" target="_blank">
-            <span class="fa fa-linkedin"></span></a>
-        </p>
-      </div>
-    </div>
-  <div style="footer" id="footer">Jim McBrayer</div>
-  </div>
+<div id="home">
+  <h1>Jim Alan McBrayer,</h1>
+  <h2>Front-End Developer</h2>
+  <p>Hey! I love creating, and learning new things everyday...I'm currently a General Manager for CEC Entertainment.</p>
 </div>
 
-<!-- end container -->
-  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+      <div class="container" id="welcome">
+        <!--begin container-->
+        <div class="row">
+          <!--begin row-->
+          <div class="col-xs-12" id="about">
+            <div id="aboutme"></div>
+            <!--/about me -->
+            <h1>About</h1>
 
-    <script src="js/index.js"></script>
+            <em>"Try not, do or do not, there is no try." -Yoda</em>
+
+            <p>Hey! My name is Jim, my family knows me as Alan though. I was born and raised in Tennessee and now I reside in 
+              Phoenix, AZ. I would say my passion is learning, and being able to create, or edit something..and see the amazing results. 
+            I've been developing since I was 12. I started officially with webside design in high school. I recieved an award for <em>1st</em>
+          place in Web Design while I was in FBLA, for the state of Tennessee. I designed the school website. I absolutly loved it.  </p>
+          <p>
+            I also modded for games, and read a C++ book. I made my own game servers, and edited the game to my liking. I first started modding
+            for a game called Tribes. I created a well know mod, ShifterK. 
+          </p>
+          <p> 
+            Since then however, I have gone through the ranks of Managment in Retail and Restaurant businesses. I was a Regional Training Manager,
+            and I'm currently a General Manager for Chuck E. Cheeses and I'm taking a step into the real FrontEnd Development world!!!</p>
+            
+
+          </div>
+
+          <div class="col-xs-12" id="portfolio">
+            <!-- Portfolio -->
+            <h1>Portfolio</h1>
+            <p>Current Projects</p>
+            <p>
+              
+              <div class="container">
+                <div class="row">
+
+
+                  <div class="col-lg-3"> <a href="https://codepen.io/alancode/full/MvKJPK/" target="_blank" id="port-link"><img src="rqm.jpg" class="img-thumbnail"  alt="Random Quote Machine" width="304" height="236">Random Quote Machine |</a><img>
+                  </div>
+                  <div class="col-lg-3"><a href="https://codepen.io/alancode/full/gxMrrO/" target="_blank" id="port-link"><img src="weather.jpg" class="img-thumbnail" alt="WeatherApp" width="304" height="236">Weather App |</a></img>
+                  </div>
+                  <div class="col-lg-3"><a href="https://codepen.io/alancode/full/ZJOaVg/" target="_blank" id="port-link"><img src="wiki.jpg" class="img-thumbnail" alt="Wiki Viewer" width="304" height="236">Wiki Viewer |</a></img>
+                  </div>
+                  <div class="col-lg-3"><a href="https://codepen.io/alancode/full/zdBRrR/" target="_blank" id="port-link"><img src="twitch.jpg" class="img-thumbnail"  alt="Twitch JSON Api" width="304" height="236">Twitch JSON API |</a></img>
+                  </div>
+
+
+
+                </div>
+                <!--row-->
+              </div>
+          </div>
+          <div class="col-xs-12" id="skills">
+            <h1>placeHolder
+            </h1>
+            <p> ipsum</p>
+          </div>
+          
+            <div class="col-xs-12" id="contact">
+            <div id="contactme">
+              <!-- contact -->
+              <h1>Contact Me</h1>
+              <p>Hey there! Here are some various links and or social media accounts if you would like to get in touch with me!</p>
+              <p>
+                <a class="btn btn-social-icon btn-lg btn-twitter" href="https://www.twitter.com/alancode" target="_blank">
+            <span class="fa fa-twitter"></span></a>
+                <a class="btn btn-social-icon btn-lg btn-facebook" href="" target="_blank">
+            <span class="fa fa-facebook"></span></a>
+                <a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.twitter.com/alancode" target="_blank">
+            <span class="fa fa-linkedin"></span></a>
+                <a class="btn btn-social-icon btn-lg btn-github" href="https://jimalanmcb.github.io/profile" target="_blank">
+              <span class="fa fa-github"></span></a>
+                <a class="btn btn-social-icon btn-lg btn-codepen" href="https://codepen.io/alancode" target="_blank">
+              <span class="fa fa-codepen"></span></a>
+                <a class="btn btn-social-icon btn-log" href="mailto:alancode@gmail.com">
+                  <span class="fa fa-envelope-o"></span></a>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+
+
+
+
+
+    
+    </div>
+  </div>
+
+  <!-- end container -->
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+  <script src="js/index.js"></script>
 
 </body>
+
 </html>
