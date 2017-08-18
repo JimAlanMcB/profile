@@ -33,6 +33,7 @@
 //     };
 // }
 
+//Top right Nav Menu
 
 $('#homeBtn').click(function(element){
 $('#about, #portfolio, #contact, #skills').fadeOut('slow').promise().done(function(){
@@ -61,3 +62,20 @@ $('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done
 });
 });
 
+//-- Secondary Nav
+
+$('#aboutBtn2').click(function(element){
+$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+	$('#about').fadeIn('slow');
+});
+});
+$('#portBtn2').click(function(element){
+$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+	$('#portfolio').fadeIn('slow');
+});
+});
+$('#contactBtn2').click(function(element){
+$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+	$('#contact').fadeIn('slow');
+});
+});
