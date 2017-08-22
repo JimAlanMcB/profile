@@ -1,0 +1,66 @@
+body{
+     background: rgba(25, 25, 112, 1);
+    font-family: 'Roboto', sans-serif;
+}
+div {
+background-color: gray;
+padding: 5px;
+border-radius: 10px;
+
+}
+
+.container {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 300px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+.cButton {
+font-size: 20px;
+background-color: orangered;
+border: 1px;
+border-style: solid;
+border-color: black;
+height: 60px;
+color: white;
+border-radius: 5px;
+
+
+
+}
+.cButton:hover{
+    background-color: orange;
+}
+.cView {
+
+overflow-x: hidden;
+background-color: black;
+border: 1px; 
+border-style: solid;
+border-color: white;
+height: 100px;
+color : white;
+font-size: 60px;
+text-align: right;
+
+}
+.nButton {
+    background-color: gainsboro;
+    border: 1px;
+border-style: solid;
+border-color: black;
+height: 60px;
+color: black;
+font-size: 20px;
+
+
+}
+.nButton:hover {
+    background-color: gray;
+}
