@@ -14,37 +14,47 @@ var totalTimeView = document.getElementById("totalTimeView");
 
 var showTimeViewBtnMinus = document.getElementById("showTimeViewBtnMinus");
 showTimeViewBtnMinus.addEventListener("click", function(event) {
-  if (int <= 1) {
-    return;
+  clear();
+  if (int < 1) {
+    int = 1;
+    totalTimeView.textContent = int;
+    showTimeView.textContent = int;
   } else {
     running = false;
-    clear();
+
     int--;
     totalTimeView.textContent = int;
     showTimeView.textContent = int;
+    document.getElementById("timerTitle").textContent =
+      "Start Pomodoro!";
   }
 });
 
 var showTimeViewBtnPlus = document.getElementById("showTimeViewBtnPlus");
 showTimeViewBtnPlus.addEventListener("click", function(event) {
-  if (int <= 1) {
-    return;
+  clear();
+  if (int < 1) {
+    int = 1;
+    totalTimeView.textContent = int;
+    showTimeView.textContent = int;
   } else {
     running = false;
-    clear();
     int++;
     totalTimeView.textContent = int;
     showTimeView.textContent = int;
+    document.getElementById("timerTitle").textContent =
+      "Start Pomodoro!";
   }
 });
 
 totalTimeView.addEventListener("click", function(event) {
-
+  if (int === 0) {
+    return;
+  }
   if (!running) {
     startTimer(int, totalTimeView); //showTimeView
     running = true;
   }
-
 });
 
 //-- breakTime Area----------------------------------------------------------------------------
@@ -56,8 +66,9 @@ var breakTimeViewBtnMinus = document.getElementById("breakTimeViewBtnMinus");
 breakTimeViewBtnMinus.addEventListener("click", function(event) {
   // running = false;
   // clear();
-  if (bint <= 1) {
-    return;
+  if (bint < 1) {
+    bint = 1;
+    breakTimeView.textContent = bint;
   } else {
     bint--;
     // totalTimeView.textContent = int;
@@ -69,8 +80,9 @@ var breakTimeViewBtnPlus = document.getElementById("breakTimeViewBtnPlus");
 breakTimeViewBtnPlus.addEventListener("click", function(event) {
   //running = false;
   //clear();
-  if (bint <= 1) {
-    return;
+  if (bint < 1) {
+    bint = 1;
+    breakTimeView.textContent = bint;
   } else {
     bint++;
     // totalTimeView.textContent = int;
@@ -81,6 +93,7 @@ breakTimeViewBtnPlus.addEventListener("click", function(event) {
 //--pause and resume buttons -----------------------------------------------------------------------
 var pauseBtn = document.getElementById("pauseBtn");
 pauseBtn.addEventListener("click", function(event) {
+  document.getElementById("timerTitle").textContent = "Session Paused!";
   running = false;
   var per = 100;
 });
@@ -88,6 +101,7 @@ pauseBtn.addEventListener("click", function(event) {
 var resumeBtn = document.getElementById("resumeBtn");
 resumeBtn.addEventListener("click", function(event) {
   running = true;
+  document.getElementById("timerTitle").textContent = "Session Resumed!";
 });
 
 //-- timer section ----------------------------------------------------------------------------------
@@ -116,7 +130,7 @@ function startTimer(duration, display) {
       }
 
       if (timer === 0) {
-        var audio = new Audio('bell.mp3');
+        var audio = new Audio("bell.mp3");
         audio.play();
         clear();
         startBreak(bint, display);
