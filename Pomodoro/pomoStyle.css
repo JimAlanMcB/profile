@@ -24,7 +24,7 @@ header {
   cursor: pointer;
 }
 #totalTimeView:hover {
-  color: red;
+  color: green;
 }
 .timebtn {
   cursor: pointer;
@@ -33,7 +33,7 @@ header {
   font-family: 'Shrikhand', cursive;
 }
 .timebtn:hover {
-  color: red;
+  color: green;
 }
 #timertitle {
   font-family: 'Shrikhand', cursive;
