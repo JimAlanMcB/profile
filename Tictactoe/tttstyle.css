@@ -18,6 +18,9 @@
  cursor: pointer;
 
 }
+.xoro:visited {
+  color: #dfdce3;
+}
 .container{
   clear:both;
   padding-top: 20px;
@@ -73,7 +76,12 @@
   margin: 15px;
   font-weight: bold;
   color: #dfdce3;
-  font-size: 30px;
+  font-size: 90px;
+}
+@media screen and (max-width:768px){
+  .msgArea{
+font-size: 50px;
+  }
 }
 body {
   background-color: #4abdac;
@@ -85,10 +93,19 @@ body {
 .btn {
   background-color: #f7b733;
 }
+
 .btn:hover {
   background-color: #fc4a1a;
 }
-
+.btn:visited {
+  background-color: #f7b733;
+}
+.btn:active{
+  background-color: #fc4a1a;
+}
+.btn:link {
+  background-color: #f7b733;
+}
 @media screen and (max-width: 768px) {
   .outer {
   text-align: center;
@@ -137,11 +154,7 @@ body {
     font-family: 'Baloo Bhaijaan', cursive;
   }
 }
-@media screen and (max-width: 360px) {
-  .msgArea {
-    
-  }
-}
+
 @media screen and (max-width: 360px) {
   .container {
     max-width: 100%;

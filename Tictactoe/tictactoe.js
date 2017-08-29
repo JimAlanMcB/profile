@@ -48,6 +48,7 @@ function checkBoard(number) {
 console.log(realBoard);
 
 function startGame() {
+  
   checkWinner();
   for (var i = 0; i < 9; i++) {
     clearGameBoard(i);
@@ -56,9 +57,13 @@ function startGame() {
   if (Math.random() < 0.5) {
     turn = huPlayer;
   }
-
+if (turn != "X" || turn != "O") {
+    setMsg("Choose X or O");
+    return;
+  }
+  else{
   setMsg("It's " + turn + "'s turn");
-
+  }
   if (turn == aiPlayer) {
     aiTurn();
   }
