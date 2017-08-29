@@ -1,0 +1,204 @@
+.outer {
+  margin-top: 40px;
+  max-width: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-left: 40px;
+
+  font-family: 'Baloo Bhaijaan', cursive;
+}
+.xoro {
+  display: inline;
+  text-align: center;
+}
+.xoro:hover {
+ color : #fc4a1a;
+ cursor: pointer;
+
+}
+.container{
+  clear:both;
+  padding-top: 20px;
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-right: 22px;
+ 
+  font-family: 'Baloo Bhaijaan', cursive;
+}
+
+
+.header {
+  color: #dfdce3;
+  font-size: 100px;
+  font-family: 'Baloo Bhaijaan', cursive;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  outline-color: #fc4a1a;
+}
+
+.square {
+  color: #dfdce3;
+  background-color: #fc4a1a;
+  height: 100px;
+  width: 100px;
+  /* outline: 1px solid white; */
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  border-radius: 20%;
+  border: 1px solid silver;
+  margin: 2px;
+
+  cursor: pointer;
+  /* Firefox */
+  -moz-box-shadow: 10px 5px 7px rgba(33, 33, 33, 1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 10px 5px 7px rgba(33, 33, 33, 1);
+  /* Opera */
+  box-shadow: 10px 5px 7px rgba(33, 33, 33, 1);
+}
+.square:hover {
+  background-color: #f7b733;
+}
+.msgArea {
+  margin: 15px;
+  font-weight: bold;
+  color: #dfdce3;
+  font-size: 30px;
+}
+body {
+  background-color: #4abdac;
+  color: #dfdce3;
+}
+#startBtn {
+  box-shadow: 0 3px 0 0 #4abdac;
+}
+.btn {
+  background-color: #f7b733;
+}
+.btn:hover {
+  background-color: #fc4a1a;
+}
+
+@media screen and (max-width: 768px) {
+  .outer {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width:400px;
+  width: 100%;
+  padding-left: 6%;
+
+
+    font-family: 'Baloo Bhaijaan', cursive;
+  }
+}
+@media screen and (max-width: 414px) {
+  .outer {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width:400px;
+  width: 100%;
+  padding-left: 11%;
+
+
+    font-family: 'Baloo Bhaijaan', cursive;
+  }
+}
+ @media screen and (max-width: 768px) {
+  .container {
+    font-family: 'Baloo Bhaijaan', cursive;
+    text-align: center;
+    padding-right: 0px;
+  }
+} 
+@media screen and (max-width: 768px) {
+  .header {
+    font-family: 'Baloo Bhaijaan', cursive;
+    text-align: center;
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .outer {
+   
+    padding-left: 28px;
+    min-width: 325PX;
+    font-family: 'Baloo Bhaijaan', cursive;
+  }
+}
+@media screen and (max-width: 360px) {
+  .msgArea {
+    
+  }
+}
+@media screen and (max-width: 360px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header {
+    font-family: 'Baloo Bhaijaan', cursive;
+    max-width: 100%;
+
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .outer {
+   
+   
+    min-width: 325PX;
+    font-family: 'Baloo Bhaijaan', cursive;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container {
+    clear: both;
+    font-family: 'Baloo Bhaijaan', cursive;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+   
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    font-family: 'Baloo Bhaijaan', cursive;
+    max-width: 100%;
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .square {
+    height: 100px;
+    width: 100px;
+    /* outline: 1px solid white; */
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    border-radius: 10%;
+    border: 1px solid silver;
+    margin: 2px;
+    cursor: pointer;
+    -moz-box-shadow: 10px 5px 7px rgba(33, 33, 33, 1);
+    -webkit-box-shadow: 10px 5px 7px rgba(33, 33, 33, 1);
+    box-shadow: 10px 5px 7px rgba(33, 33, 33, 1);
+  }
+}
