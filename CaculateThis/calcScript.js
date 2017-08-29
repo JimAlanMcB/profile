@@ -1,3 +1,12 @@
+// todo :
+// delete eval function and replace
+// some refactoring needs to be completed. 
+// users can input special characters and should not be able to. 
+// color scheme needs adjustment
+
+
+
+
 var btn = document.querySelector("div");
 
 btn.addEventListener("click", function(event) {
