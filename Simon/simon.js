@@ -11,7 +11,7 @@ var count = 0;
 var seq = [];
 var litSeq = [];
 var power;
-var strictMode;
+var strictMode = false;
 
 var pwrBtn = document.getElementById("pwrBtn");
 pwrBtn.addEventListener("click", function() {
@@ -47,7 +47,7 @@ btnR.addEventListener("click", function hR() {
   } else {
     seq.push("RED");
     audioR.play();
-    this.style.backgroundColor = "#FF0F63";
+    this.style.backgroundColor = "#FF00D8";
     checkSeq();
     setTimeout(function() {
       this.btnR.style.backgroundColor = "#FF0F63";
@@ -62,7 +62,7 @@ btnY.addEventListener("click", function() {
   } else {
     audioY.play();
     seq.push("YELLOW");
-    btnY.style.backgroundColor = "#FF7700";
+    btnY.style.backgroundColor = "#FF9900";
     checkSeq();
     setTimeout(function() {
       this.btnY.style.backgroundColor = "#FF7700";
@@ -77,7 +77,7 @@ btnB.addEventListener("click", function hB() {
   } else {
     audioB.play();
     seq.push("BLUE");
-    this.style.backgroundColor = "#00D0FF";
+    this.style.backgroundColor = "#075AFF";
     checkSeq();
     setTimeout(function() {
       this.btnB.style.backgroundColor = "#00D0FF";
@@ -92,7 +92,7 @@ btnG.addEventListener("click", function hG() {
   } else {
     audioG.play();
     seq.push("GREEN");
-    this.style.backgroundColor = "#37CA05";
+    this.style.backgroundColor = "#43FF05";
     checkSeq();
     setTimeout(function() {
       this.btnG.style.backgroundColor = "#37CA05";

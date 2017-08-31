@@ -3,152 +3,198 @@
 <div class="btnM"></div>
 <div class="btnBR"></div>
 <div class="btnTR"></div> */
- 
-body {
-    color: white;
-    width: 100%;
-    margin-top: 10%;
-    height: 100%;
-    background-color: black;
-    font-family: 'Baloo Bhaijaan', cursive;
-    font-size:20px;
-}
 
-#main{
+body {
+  color: white;
+  width: 100%;
+  margin-top: 10%;
+  height: 100%;
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .btnM {
+    font-size: 10px;
+  }
+  #startBtn {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+ body #main {
     position: absolute;
     top: 50%;
-    left: 50%;
+    width: 70%;
+    padding-top: 70%;
+    left: 30%;
     margin: -15% 0 0 -15%;
     height: 0px;
-    width: 30%;
-    padding-top: 30%;
     overflow: visible;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+.box {
+  display: block;
+  width: 48%;
+  height: 48%;
+  position: absolute;
+  cursor: pointer;
+}
+.btnR {
+  background: #ff0f63;
+  top: 0;
+  left: 0;
+  border-radius: 15%;
+}
+.btnB {
+  background: #00d0ff;
+  top: 0;
+  right: 0;
+  border-radius: 15%;
+}
+.btnY {
+  background: #ff7700;
+  bottom: 0;
+  right: 0;
+  border-radius: 15%;
+}
+.btnG {
+  background: #37ca05;
+  bottom: 0;
+  left: 0;
+  border-radius: 15%;
+}
+}
 
+
+#main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -15% 0 0 -15%;
+  height: 0px;
+  width: 30%;
+  padding-top: 30%;
+  overflow: visible;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-.box{
-    display:block;
-    width: 48%;
-    height: 48%;
-    position: absolute;
-    cursor: pointer;
+.box {
+  display: block;
+  width: 48%;
+  height: 48%;
+  position: absolute;
+  cursor: pointer;
 }
-#msgHolder{
-margin-top: 10px;
-}
-@media screen and(max-width:768px){
-#startRow{
- width:400%;
-}
-}
-@media screen and(max-width:768px){
-    #startBtn{
-    width:50%
-}
-}
-#startRow{
- width:400%;
+#msgHolder {
+  margin-top: 10px;
 }
 
-#startBtn{
-    border-radius: 10%;
-    
-    text-align: center;
-    background-color: #FF0F63;
-    
+#startRow {
+  width: 400%;
 }
-#startBtn:hover{
-    border: 1px solid #FF0F63;
-    background-color: white;
-    color: black;
+
+#startBtn {
+  border-radius: 10%;
+
+  text-align: center;
+  background-color: #ff0f63;
 }
-#pwrBtn{
-    border-radius: 100%;
-    border: 1px solid #00D0FF;
-    background-color: #FF0F63;
-    width: 20px;
-    height: 20px;
+#startBtn:hover {
+  border: 1px solid #ff0f63;
+  background-color: white;
+  color: black;
 }
-#pwrBtn:hover{
-    background-color: lightcoral;
+#pwrBtn {
+  border-radius: 100%;
+  border: 1px solid #00d0ff;
+  background-color: #ff0f63;
+  width: 20px;
+  height: 20px;
 }
-.btnM{
-        position: absolute;
-    top: 0;
-    left: 25%;
-    margin: -15% 0 0 -15%;
-    height: 0px;
-    width: 15%;
-    padding-top: 18%;
-    overflow: visible;
+#pwrBtn:hover {
+  background-color: lightcoral;
 }
-.btnR{
-   background: #FF0F63;
-   top: 0;
-   left: 0; 
-   border-radius: 15%     
+.btnM {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  margin: -15% 0 0 -15%;
+  height: 0px;
+  width: 15%;
+  padding-top: 18%;
+  overflow: visible;
+}
+.btnR {
+  background: #ff0f63;
+  top: 0;
+  left: 0;
+  border-radius: 15%;
 }
 .btnR:hover {
-    -webkit-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1);
--moz-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1);
-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1)
+  -webkit-box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
+  -moz-box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
+  box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
 }
-.Rhover{
-     -webkit-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1);
--moz-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1);
-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1)
+.Rhover {
+  -webkit-box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
+  -moz-box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
+  box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
 }
-.btnB{
-background: #00D0FF;
-top: 0;
-right: 0;
-border-radius: 15%
+.btnB {
+  background: #00d0ff;
+  top: 0;
+  right: 0;
+  border-radius: 15%;
 }
-.btnB:hover{
-    -webkit-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
--moz-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
+.btnB:hover {
+  -webkit-box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
+  -moz-box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
+  box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
 }
-.Bhover{
-    -webkit-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
--moz-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
+.Bhover {
+  -webkit-box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
+  -moz-box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
+  box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
 }
-.btnY{
-   background: #FF7700;
-   bottom: 0;
-   right: 0;
-   border-radius: 15%
+.btnY {
+  background: #ff7700;
+  bottom: 0;
+  right: 0;
+  border-radius: 15%;
 }
-.btnY:hover{
- -webkit-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
--moz-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
+.btnY:hover {
+  -webkit-box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
+  -moz-box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
+  box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
 }
-.Yhover{
-   -webkit-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
--moz-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1); 
+.Yhover {
+  -webkit-box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
+  -moz-box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
+  box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
 }
-.btnG{
-   background: #37CA05;
-   bottom: 0;
-   left: 0;
-   border-radius: 15%
-} 
-.btnG:hover{
-    -webkit-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
--moz-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
+.btnG {
+  background: #37ca05;
+  bottom: 0;
+  left: 0;
+  border-radius: 15%;
 }
-.Ghover{
-    -webkit-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
--moz-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
+.btnG:hover {
+  -webkit-box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
+  -moz-box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
+  box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
+}
+.Ghover {
+  -webkit-box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
+  -moz-box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
+  box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
 }
 
 /* The switch - the box around the slider */
@@ -160,7 +206,9 @@ box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
 }
 
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+.switch input {
+  display: none;
+}
 
 /* The slider */
 .slider {
@@ -170,10 +218,10 @@ box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #FF0F63;
+  background-color: #ff0f63;
   border: 1px solid black;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -185,16 +233,16 @@ box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
   bottom: 1px;
   background-color: whitesmoke;
   border: 1px solid black;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #37CA05;
+  background-color: #37ca05;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #37CA05;
+  box-shadow: 0 0 1px #37ca05;
 }
 
 input:checked + .slider:before {
