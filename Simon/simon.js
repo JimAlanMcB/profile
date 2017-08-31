@@ -187,41 +187,41 @@ function hY(btnY) {
   //yellow
   // litSeq.push("YELLOW");
   btnY.style.backgroundColor = "#FF7700";
-  $("#btnY").toggleClass("Yhover");
+  $("#btnY").addClass("Yhover");
 
   audioY.play();
   setTimeout(function() {
-    $("#btnY").toggleClass("Yhover");
+    $("#btnY").removeClass("Yhover");
     this.btnY.style.backgroundColor = "#FF7700";
   }, 500);
 }
 function hG(btnG) {
   //green
-  $("#btnG").toggleClass("Ghover");
+  $("#btnG").addClass("Ghover");
   audioG.play();
   btnG.style.backgroundColor = "#37CA05";
   setTimeout(function() {
-    $("#btnG").toggleClass("Ghover");
+    $("#btnG").removeClass("Ghover");
     this.btnG.style.backgroundColor = "#37CA05";
   }, 500);
 }
 function hR(btnR) {
   //red
-  $("#btnR").toggleClass("Rhover");
+  $("#btnR").addClass("Rhover");
   audioR.play();
   btnR.style.backgroundColor = "#FF32B0";
   setTimeout(function() {
-    $("#btnR").toggleClass("Rhover");
+    $("#btnR").removeClass("Rhover");
     this.btnR.style.backgroundColor = "#FF0F63";
   }, 500);
 }
 function hB(btnB) {
   //blue
-  $("#btnB").toggleClass("Bhover");
+  $("#btnB").addClass("Bhover");
   audioB.play();
   btnB.style.backgroundColor = "#00D0FF";
   setTimeout(function() {
-    $("#btnB").toggleClass("Bhover");
+    $("#btnB").removeClass("Bhover");
     this.btnB.style.backgroundColor = "#00D0FF";
   }, 500);
 }
