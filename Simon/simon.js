@@ -1,3 +1,7 @@
+if (!("ontouchstart" in document.documentElement)) {
+  document.documentElement.className += "no-touch";
+}
+
 var btnG = document.getElementById("btnG");
 var btnY = document.getElementById("btnY");
 var btnB = document.getElementById("btnB");
@@ -27,17 +31,15 @@ pwrBtn.addEventListener("click", function() {
   return power;
 });
 var strictModeBtn = document.getElementById("strictMode");
-strictModeBtn.addEventListener("click", function(){
-   if (strictMode){
-       strictMode = false;
-       seq = [];
-       litSeq = [];
-       count = 0;
-   } else {
-       strictMode = true;
-   }
-
-
+strictModeBtn.addEventListener("click", function() {
+  if (strictMode) {
+    strictMode = false;
+    seq = [];
+    litSeq = [];
+    count = 0;
+  } else {
+    strictMode = true;
+  }
 });
 
 btnR.addEventListener("click", function hR() {
@@ -51,7 +53,7 @@ btnR.addEventListener("click", function hR() {
     checkSeq();
     setTimeout(function() {
       this.btnR.style.backgroundColor = "#FF0F63";
-    }, 500);
+    }, 50);
   }
 });
 
@@ -66,7 +68,7 @@ btnY.addEventListener("click", function() {
     checkSeq();
     setTimeout(function() {
       this.btnY.style.backgroundColor = "#FF7700";
-    }, 500);
+    }, 50);
   }
 });
 
@@ -81,7 +83,7 @@ btnB.addEventListener("click", function hB() {
     checkSeq();
     setTimeout(function() {
       this.btnB.style.backgroundColor = "#00D0FF";
-    }, 500);
+    }, 50);
   }
 });
 
@@ -96,7 +98,7 @@ btnG.addEventListener("click", function hG() {
     checkSeq();
     setTimeout(function() {
       this.btnG.style.backgroundColor = "#37CA05";
-    }, 500);
+    }, 50);
   }
 });
 
@@ -114,9 +116,9 @@ function newMove() {
   } else {
     nextSequence();
     count++;
-    var msg = document.getElementById('msgArea');
+    var msg = document.getElementById("msgArea");
     msg.innerHTML = count;
-  
+
     console.log(count);
   }
 }
@@ -181,15 +183,13 @@ function restartGame() {
   newMove();
 }
 
-
-
 function hY(btnY) {
   //yellow
   // litSeq.push("YELLOW");
-  btnY.style.backgroundColor = "#FF7700";
-  $("#btnY").addClass("Yhover");
-
+  btnY.style.backgroundColor = "#FF9900";
   audioY.play();
+  $("#btnY").removeClass("Yhover");
+  $("#btnY").addClass("Yhover");
   setTimeout(function() {
     $("#btnY").removeClass("Yhover");
     this.btnY.style.backgroundColor = "#FF7700";
@@ -197,9 +197,11 @@ function hY(btnY) {
 }
 function hG(btnG) {
   //green
-  $("#btnG").addClass("Ghover");
+
   audioG.play();
-  btnG.style.backgroundColor = "#37CA05";
+  btnG.style.backgroundColor = "#43FF05";
+  $("#btnG").removeClass("Ghover");
+  $("#btnG").addClass("Ghover");
   setTimeout(function() {
     $("#btnG").removeClass("Ghover");
     this.btnG.style.backgroundColor = "#37CA05";
@@ -207,9 +209,11 @@ function hG(btnG) {
 }
 function hR(btnR) {
   //red
-  $("#btnR").addClass("Rhover");
+
   audioR.play();
   btnR.style.backgroundColor = "#FF32B0";
+  $("#btnR").removeClass("Rhover");
+  $("#btnR").addClass("Rhover");
   setTimeout(function() {
     $("#btnR").removeClass("Rhover");
     this.btnR.style.backgroundColor = "#FF0F63";
@@ -217,9 +221,11 @@ function hR(btnR) {
 }
 function hB(btnB) {
   //blue
-  $("#btnB").addClass("Bhover");
+
   audioB.play();
-  btnB.style.backgroundColor = "#00D0FF";
+  btnB.style.backgroundColor = "#00EEFF";
+  $("#btnB").removeClass("Bhover");
+  $("#btnB").addClass("Bhover");
   setTimeout(function() {
     $("#btnB").removeClass("Bhover");
     this.btnB.style.backgroundColor = "#00D0FF";
@@ -230,14 +236,15 @@ function checkSeq() {
   // console.log(seq.length);
   if (seq[seq.length - 1] !== litSeq[seq.length - 1]) {
     console.log("WRONG");
-    if(strictMode){
-        alert("Start Over!");
-        console.log("try again");
-        restartGame();
-    }
-    alert("WRONG");
+    if (strictMode) {
+      alert("Start Over!");
+      console.log("try again");
+      restartGame();
+    } else{
+    alert("Try Again!");
     seq = [];
     move();
+          }
   } else {
     var next = seq.length === litSeq.length;
     console.log(next);

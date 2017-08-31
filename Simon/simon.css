@@ -9,8 +9,8 @@ body {
   width: 100%;
   margin-top: 10%;
   height: 100%;
-  background-color: black;
-  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(37, 25, 49);
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
 }
 @media only screen and (max-width: 768px) {
@@ -22,7 +22,7 @@ body {
   }
 }
 @media only screen and (max-width: 768px) {
- body #main {
+  body #main {
     position: absolute;
     top: 50%;
     width: 70%;
@@ -37,39 +37,42 @@ body {
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-.box {
-  display: block;
-  width: 48%;
-  height: 48%;
-  position: absolute;
-  cursor: pointer;
+  .box {
+    display: block;
+    width: 48%;
+    height: 48%;
+    position: absolute;
+    cursor: pointer;
+  }
+  .btnR {
+    background: #ff0f63;
+    top: 0;
+    left: 0;
+    border-radius: 15%;
+    border: 1px solid whitesmoke;
+  }
+  .btnB {
+    background: #00d0ff;
+    top: 0;
+    right: 0;
+    border-radius: 15%;
+    border: 1px solid whitesmoke;
+  }
+  .btnY {
+    background: #ff7700;
+    bottom: 0;
+    right: 0;
+    border-radius: 15%;
+    border: 1px solid whitesmoke;
+  }
+  .btnG {
+    background: #37ca05;
+    bottom: 0;
+    left: 0;
+    border-radius: 15%;
+    border: 1px solid whitesmoke;
+  }
 }
-.btnR {
-  background: #ff0f63;
-  top: 0;
-  left: 0;
-  border-radius: 15%;
-}
-.btnB {
-  background: #00d0ff;
-  top: 0;
-  right: 0;
-  border-radius: 15%;
-}
-.btnY {
-  background: #ff7700;
-  bottom: 0;
-  right: 0;
-  border-radius: 15%;
-}
-.btnG {
-  background: #37ca05;
-  bottom: 0;
-  left: 0;
-  border-radius: 15%;
-}
-}
-
 
 #main {
   position: absolute;
@@ -112,6 +115,9 @@ body {
   background-color: white;
   color: black;
 }
+.no-touch #startBtn:hover {
+  background-color: #ff0f63;
+}
 #pwrBtn {
   border-radius: 100%;
   border: 1px solid #00d0ff;
@@ -137,11 +143,18 @@ body {
   top: 0;
   left: 0;
   border-radius: 15%;
+  border: 1px solid whitesmoke;
 }
 .btnR:hover {
   -webkit-box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
   -moz-box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
   box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
+}
+.no-touch .btnR:hover {
+  background-color: rgba(235, 17, 148, 1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(235, 17, 148, 1);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(235, 17, 148, 1);
+  box-shadow: 0px 0px 0px 0px rgba(235, 17, 148, 1);
 }
 .Rhover {
   -webkit-box-shadow: 10px 2px 139px 0px rgba(235, 17, 148, 1);
@@ -153,11 +166,19 @@ body {
   top: 0;
   right: 0;
   border-radius: 15%;
+  border: 1px solid whitesmoke;
 }
+
 .btnB:hover {
   -webkit-box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
   -moz-box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
   box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
+}
+.no-touch .btnB:hover {
+  background-color: rgba(0, 208, 255, 1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 208, 255, 1);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 208, 255, 1);
+  box-shadow: 0px 0px 0px 0px rgba(0, 208, 255, 1);
 }
 .Bhover {
   -webkit-box-shadow: 10px 2px 139px 0px rgba(0, 208, 255, 1);
@@ -169,11 +190,18 @@ body {
   bottom: 0;
   right: 0;
   border-radius: 15%;
+  border: 1px solid whitesmoke;
 }
 .btnY:hover {
   -webkit-box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
   -moz-box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
   box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
+}
+.no-touch .btnY:hover {
+  background-color: rgba(255, 119, 0, 1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 119, 0, 1);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(255, 119, 0, 1);
+  box-shadow: 0px 0px 0px 0px rgba(255, 119, 0, 1);
 }
 .Yhover {
   -webkit-box-shadow: 10px 2px 139px 0px rgba(255, 119, 0, 1);
@@ -185,11 +213,18 @@ body {
   bottom: 0;
   left: 0;
   border-radius: 15%;
+  border: 1px solid whitesmoke;
 }
 .btnG:hover {
   -webkit-box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
   -moz-box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
   box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
+}
+.no-touch .btnG:hover {
+  background-color: rgba(55, 202, 30, 1);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(55, 202, 5, 1);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(55, 202, 5, 1);
+  box-shadow: 0px 0px 0px 0px rgba(55, 202, 5, 1);
 }
 .Ghover {
   -webkit-box-shadow: 10px 2px 139px 0px rgba(55, 202, 5, 1);
