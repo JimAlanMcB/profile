@@ -1,0 +1,213 @@
+/* <div class="btnTL"></div>
+<div class="btnBL"></div>
+<div class="btnM"></div>
+<div class="btnBR"></div>
+<div class="btnTR"></div> */
+ 
+body {
+    color: white;
+    width: 100%;
+    margin-top: 10%;
+    height: 100%;
+    background-color: black;
+    font-family: 'Baloo Bhaijaan', cursive;
+    font-size:20px;
+}
+
+#main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15% 0 0 -15%;
+    height: 0px;
+    width: 30%;
+    padding-top: 30%;
+    overflow: visible;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+.box{
+    display:block;
+    width: 48%;
+    height: 48%;
+    position: absolute;
+    cursor: pointer;
+}
+#msgHolder{
+margin-top: 10px;
+}
+@media screen and(max-width:768px){
+#startRow{
+ width:400%;
+}
+}
+@media screen and(max-width:768px){
+    #startBtn{
+    width:50%
+}
+}
+#startRow{
+ width:400%;
+}
+
+#startBtn{
+    border-radius: 10%;
+    
+    text-align: center;
+    background-color: #FF0F63;
+    
+}
+#startBtn:hover{
+    border: 1px solid #FF0F63;
+    background-color: white;
+    color: black;
+}
+#pwrBtn{
+    border-radius: 100%;
+    border: 1px solid #00D0FF;
+    background-color: #FF0F63;
+    width: 20px;
+    height: 20px;
+}
+#pwrBtn:hover{
+    background-color: lightcoral;
+}
+.btnM{
+        position: absolute;
+    top: 0;
+    left: 25%;
+    margin: -15% 0 0 -15%;
+    height: 0px;
+    width: 15%;
+    padding-top: 18%;
+    overflow: visible;
+}
+.btnR{
+   background: #FF0F63;
+   top: 0;
+   left: 0; 
+   border-radius: 15%     
+}
+.btnR:hover {
+    -webkit-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1);
+-moz-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1);
+box-shadow: 10px 2px 139px 0px rgba(235,17,148,1)
+}
+.Rhover{
+     -webkit-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1);
+-moz-box-shadow: 10px 2px 139px 0px rgba(235,17,148,1);
+box-shadow: 10px 2px 139px 0px rgba(235,17,148,1)
+}
+.btnB{
+background: #00D0FF;
+top: 0;
+right: 0;
+border-radius: 15%
+}
+.btnB:hover{
+    -webkit-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
+-moz-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
+box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
+}
+.Bhover{
+    -webkit-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
+-moz-box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
+box-shadow: 10px 2px 139px 0px rgba(0,208,255,1);
+}
+.btnY{
+   background: #FF7700;
+   bottom: 0;
+   right: 0;
+   border-radius: 15%
+}
+.btnY:hover{
+ -webkit-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
+-moz-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
+box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
+}
+.Yhover{
+   -webkit-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
+-moz-box-shadow: 10px 2px 139px 0px rgba(255,119,0,1);
+box-shadow: 10px 2px 139px 0px rgba(255,119,0,1); 
+}
+.btnG{
+   background: #37CA05;
+   bottom: 0;
+   left: 0;
+   border-radius: 15%
+} 
+.btnG:hover{
+    -webkit-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
+-moz-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
+box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
+}
+.Ghover{
+    -webkit-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
+-moz-box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
+box-shadow: 10px 2px 139px 0px rgba(55,202,5,1);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  margin-left: 15px;
+  width: 50px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FF0F63;
+  border: 1px solid black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 15px;
+  left: 4px;
+  bottom: 1px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #37CA05;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #37CA05;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 10px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

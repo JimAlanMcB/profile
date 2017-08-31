@@ -1,0 +1,166 @@
+var btnG = document.getElementById("btnG");
+var btnY = document.getElementById("btnY");
+var btnB = document.getElementById("btnB");
+var btnR = document.getElementById("btnR");
+var btnM = document.getElementById("btnM");
+var count = "0";
+var seq = [];
+var litSeq = [];
+
+btnR.addEventListener("click", function hR() {
+  //red
+  seq.push("RED");
+  this.style.backgroundColor = "rgba(255,0,0,0.5)";
+  checkWin();
+  setTimeout(function() {
+    this.btnR.style.backgroundColor = "black";
+  }, 1000);
+});
+btnY.addEventListener("click", function() {
+  //yellow
+  seq.push("YELLOW");
+  btnY.style.backgroundColor = "rgba(255,255,0,0.5)";
+  checkWin();
+  setTimeout(function() {
+    this.btnY.style.backgroundColor = "black";
+  }, 1000);
+});
+btnB.addEventListener("click", function hB() {
+  //blue
+  seq.push("BLUE");
+  this.style.backgroundColor = "rgba(0,102,255,0.5)";
+  checkWin();
+  setTimeout(function() {
+    this.btnB.style.backgroundColor = "black";
+  }, 1000);
+});
+btnG.addEventListener("click", function hG() {
+  //green
+  seq.push("GREEN");
+  this.style.backgroundColor = "rgba(0,255,0,0.5)";
+  checkWin();
+  setTimeout(function() {
+    this.btnG.style.backgroundColor = "black";
+  }, 1000);
+});
+
+//  var randomArea = {
+//     ranR: function() {
+//       hR(btnR);
+//     },
+//     ranB: function() {
+//       hB(btnB);
+//     },
+//     ranY: function() {
+//       hY(btnY);
+//     },
+//     ranG: function() {
+//       hG(btnG);
+//     }
+//   };
+
+function startGame() {
+    restartGame();
+    
+}
+
+function newMove() {
+ var ran = Math.floor(Math.random()*4);
+// var level1 = [hY(btnY)];
+seq = [];
+ nextSequence();
+ checkWin();
+// check win needs to check if the arr.length is 20
+// before actually winning, otherwise, needs to do another move
+// else new move();
+// find a way to make each move not a ton of typing
+  count++;
+}
+
+function nextSequence(){
+
+   var nextSequenceArr = ["RED", "GREEN", "BLUE", "YELLOW"][Math.floor(Math.random()*4)]; 
+   litSeq.push(nextSequenceArr);
+   console.log(nextSequenceArr);
+   console.log(litSeq);
+
+}
+
+function restartGame() {
+    count = 0;
+    litSeq = [];
+    seq = [];
+    newMove();
+}
+
+function strict() {}
+
+function hY(btnY) {
+  //yellow
+  litSeq.push("YELLOW");
+  btnY.style.backgroundColor = "rgba(255,255,0,0.5)";
+  setTimeout(function() {
+    this.btnY.style.backgroundColor = "black";
+  }, 1000);
+}
+function hG(btnG) {
+  //green
+  btnG.style.backgroundColor = "rgba(0,255,0,0.5)";
+  setTimeout(function() {
+    this.btnG.style.backgroundColor = "black";
+  }, 1000);
+}
+function hR(btnR) {
+  //red
+  btnR.style.backgroundColor = "rgba(255,0,0,0.5)";
+  setTimeout(function() {
+    this.btnR.style.backgroundColor = "black";
+  }, 1000);
+}
+function hB(btnB) {
+  //blue
+  btnB.style.backgroundColor = "rgba(0,102,255,0.5)";
+  setTimeout(function() {
+    this.btnB.style.backgroundColor = "black";
+  }, 1000);
+}
+
+function checkWin(){
+
+    for(var i=0;i<litSeq.length;i++){
+        if(litSeq[i] === seq[i]){
+            console.log("YOU WIN"); 
+        }
+    }
+
+}
+
+
+// console.log(ran);
+// if(ran < 1){
+//     console.log("less than 1");
+//     ran++;
+// }
+//  switch(ran){
+
+//     case 1:
+//     hR(btnR);
+//     hB(btnB);
+//     hY(btnY);
+//     hG(btnG);
+//     break;
+
+//     case 2:
+//     hB(btnB);
+//     break;
+
+//     case 3:
+//     hY(btnY);
+//     break;
+
+//     case 4:
+//     hG(btnG);
+
+//  }
+  
+  //var result = [hR(btnR), hB(btnB), hY(btnY), hG(btnG)];
