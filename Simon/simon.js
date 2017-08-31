@@ -10,7 +10,7 @@ var audioG = new Audio("sounds/simonSound4.mp3");
 var count = 0;
 var seq = [];
 var litSeq = [];
-var power;
+var power = false;
 var strictMode = false;
 
 var pwrBtn = document.getElementById("pwrBtn");
