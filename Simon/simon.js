@@ -250,11 +250,13 @@ function checkSeq() {
     console.log(next);
     if (next) {
       if (count === 20) {
-        alert("YOU WIN");
+        alert("YOU WIN!?!?!");
       } else {
         console.log("moving on");
+        setTimeout(function(){
         newMove();
         seq = [];
+        },1000);
       }
     }
   }
