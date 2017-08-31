@@ -49,11 +49,11 @@ btnR.addEventListener("click", function hR() {
   } else {
     seq.push("RED");
     audioR.play();
-    this.style.backgroundColor = "#FF00D8";
+    this.style.backgroundColor = "#FF32B0";
     checkSeq();
     setTimeout(function() {
       this.btnR.style.backgroundColor = "#FF0F63";
-    }, 50);
+    }, 500);
   }
 });
 
@@ -68,7 +68,7 @@ btnY.addEventListener("click", function() {
     checkSeq();
     setTimeout(function() {
       this.btnY.style.backgroundColor = "#FF7700";
-    }, 50);
+    }, 500);
   }
 });
 
@@ -79,11 +79,11 @@ btnB.addEventListener("click", function hB() {
   } else {
     audioB.play();
     seq.push("BLUE");
-    this.style.backgroundColor = "#075AFF";
+    this.style.backgroundColor = "#00EEFF";
     checkSeq();
     setTimeout(function() {
       this.btnB.style.backgroundColor = "#00D0FF";
-    }, 50);
+    }, 500);
   }
 });
 
@@ -98,7 +98,7 @@ btnG.addEventListener("click", function hG() {
     checkSeq();
     setTimeout(function() {
       this.btnG.style.backgroundColor = "#37CA05";
-    }, 50);
+    }, 500);
   }
 });
 
