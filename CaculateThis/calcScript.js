@@ -3,7 +3,7 @@
 // some refactoring needs to be completed.
 // users can input special characters and should not be able to.
 // color scheme needs adjustment
-// Major refactoring needed, most basic caculator currently. 
+// Major refactoring needed, most basic caculator currently.
 
 var btn = document.querySelector("div");
 
@@ -76,10 +76,19 @@ equalBtn.addEventListener("click", function(event) {
     document.getElementById("viewArea").innerHTML = eval(viewArea.innerHTML);
   }
 });
+var plus = "+";
+var minus = "-";
+var times = "*";
+var divide = "/";
 
 var plusBtn = document.getElementById("plusBtn");
 plusBtn.addEventListener("click", function(event) {
-  if (viewArea.innerHTML === "+") {
+  if (
+    viewArea.innerHTML === plus  ||
+    viewArea.innerHTML === minus ||
+    viewArea.innerHTML === times ||
+    viewArea.innerHTML === divide
+  ) {
     viewArea.innerHTML = "";
   } else {
     document.getElementById("viewArea").innerHTML += "+";

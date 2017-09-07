@@ -1,3 +1,5 @@
+// Minor adjustments needed...removed choose turn logic because of bugs. 
+
 var huPlayer = "";
 var aiPlayer = "";
 var turn = "";
@@ -48,22 +50,20 @@ function checkBoard(number) {
 console.log(realBoard);
 
 function startGame() {
-  
   checkWinner();
   for (var i = 0; i < 9; i++) {
     clearGameBoard(i);
   }
-  turn = aiPlayer;
-  if (Math.random() < 0.5) {
     turn = huPlayer;
+  if (Math.random() < 0.5) {
+    turn = aiPlayer;
   }
-if (turn != "X" || turn != "O") {
-    setMsg("Choose X or O");
-    return;
-  }
-  else{
-  setMsg("It's " + turn + "'s turn");
-  }
+  // if (turn != "X" || turn != "O") {
+  //   setMsg("Choose X or O");
+  //   return;  // Removed for problems with turns
+  // } else {
+    setMsg("It's " + turn + "'s turn");
+  //}
   if (turn == aiPlayer) {
     aiTurn();
   }
@@ -97,25 +97,25 @@ function aiTurn() {
     setMsg(turn + " is the winner!!");
     return;
   } else {
-    console.log("ITS " + turn + "'S TURN");
+   // console.log("ITS " + turn + "'S TURN");
     checkBoard();
 
     if (emptyIndexies(realBoard)[1] == undefined) {
-      console.log("TIE");
+    //  console.log("TIE");
       setMsg("Draw");
       result = true;
       return;
     }
     bestSpot = minimax(realBoard, aiPlayer);
-    console.log(bestSpot);
-    console.log(fc);
+  //  console.log(bestSpot);
+  //  console.log(fc);
 
     document.getElementById("s" + bestSpot.index).innerText = aiPlayer; // just place x or o in the best spot. -- MINIMAX
 
-    console.log(turn + "'S TURN");
+  //  console.log(turn + "'S TURN");
     checkBoard();
     switchTurn();
-    console.log(turn + "'S TURN");
+ //   console.log(turn + "'S TURN");
     checkWinner();
 
     if (checkWinner()) {
@@ -182,12 +182,11 @@ function clearGameBoard(number) {
 }
 
 function minimax(newBoard, player) {
-  
   fc++;
 
   var availSpots = emptyIndexies(newBoard);
 
-    if (winning(newBoard, huPlayer)) {
+  if (winning(newBoard, huPlayer)) {
     return { score: -10 };
   } else if (winning(newBoard, aiPlayer)) {
     return { score: 10 };
@@ -195,18 +194,14 @@ function minimax(newBoard, player) {
     return { score: 0 };
   }
 
-   var moves = [];
+  var moves = [];
 
-  
   for (var i = 0; i < availSpots.length; i++) {
-   
     var move = {};
     move.index = newBoard[availSpots[i]];
 
-    
     newBoard[availSpots[i]] = player;
 
-    
     if (player == aiPlayer) {
       var result = minimax(newBoard, huPlayer);
       move.score = result.score;
@@ -214,12 +209,12 @@ function minimax(newBoard, player) {
       var result = minimax(newBoard, aiPlayer);
       move.score = result.score;
     }
-   
+
     newBoard[availSpots[i]] = move.index;
-  
+
     moves.push(move);
   }
- 
+
   var bestMove;
   if (player === aiPlayer) {
     var bestScore = -10000;
@@ -230,7 +225,6 @@ function minimax(newBoard, player) {
       }
     }
   } else {
-    
     var bestScore = 10000;
     for (var i = 0; i < moves.length; i++) {
       if (moves[i].score < bestScore) {
@@ -240,10 +234,8 @@ function minimax(newBoard, player) {
     }
   }
 
-  
   return moves[bestMove];
 }
-
 
 function emptyIndexies(board) {
   return board.filter(s => s != "O" && s != "X");
