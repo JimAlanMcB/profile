@@ -15,6 +15,11 @@ a:hover {
 a:active {
   color: white;
 }
+@media (max-width: 768px){
+  body{
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 body {
   background: #0f1626;
@@ -57,7 +62,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     text-transform: uppercase;
     font-weight: 100;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     /* width: 20%; */
   }
 }
@@ -71,6 +76,7 @@ body {
 }
 h3 {
   color: #98878f;
+  font-weight: bolder;
 }
 .btnstyle {
   border-radius: 0px !important;
@@ -88,12 +94,13 @@ h3 {
   color: #0f1626;
   background-color: #ff533d;
   border-color: #f5f5f5;
+  font-weight: bolder;
 }
 #image {
   position: fixed;
   top: 30%;
   left: 40%;
-  opacity: 1;
+  opacity: .5;
   width: 2000px;
   height: 2000px;
   -webkit-animation: spin 10s linear infinite;
@@ -146,10 +153,15 @@ ul {
 }
 h1 {
   font-size: 4em;
-  color: #ff533d;
+  color: #FF3B3F;
+  
 }
 h2 {
+  font-weight: bolder;
   color: #98878f;
+}
+.rUl{
+  line-height: inherit;
 }
 @media (max-width: 768px) {
   h1 {
