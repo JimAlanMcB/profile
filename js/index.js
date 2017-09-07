@@ -36,28 +36,28 @@
 //Top right Nav Menu
 
 $('#homeBtn').click(function(element){
-$('#about, #portfolio, #contact, #skills').fadeOut('slow').promise().done(function(){
+$('#about, #portfolio, #contact, #resume').fadeOut('slow').promise().done(function(){
 	$('#home').fadeIn('slow');
 });
 });
 
 $('#aboutBtn').click(function(element){
-$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+$('#about, #portfolio, #contact, #resume, #home').fadeOut('slow').promise().done(function(){
 	$('#about').fadeIn('slow');
 });
 });
 $('#portBtn').click(function(element){
-$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+$('#about, #portfolio, #contact, #resume, #home').fadeOut('slow').promise().done(function(){
 	$('#portfolio').fadeIn('slow');
 });
 });
-$('#skillsBtn').click(function(element){
-$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
-	$('#skills').fadeIn('slow');
+$('#resumeBtn').click(function(element){
+$('#about, #portfolio, #contact, #resume, #home').fadeOut('slow').promise().done(function(){
+	$('#resume').fadeIn('slow');
 });
 });
 $('#contactBtn').click(function(element){
-$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+$('#about, #portfolio, #contact, #resume, #home').fadeOut('slow').promise().done(function(){
 	$('#contact').fadeIn('slow');
 });
 });
@@ -65,17 +65,23 @@ $('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done
 //-- Secondary Nav
 
 $('#aboutBtn2').click(function(element){
-$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+$('#about, #portfolio, #contact, #resume, #home').fadeOut('slow').promise().done(function(){
 	$('#about').fadeIn('slow');
 });
 });
 $('#portBtn2').click(function(element){
-$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+$('#about, #portfolio, #contact, #resume, #home').fadeOut('slow').promise().done(function(){
 	$('#portfolio').fadeIn('slow');
 });
 });
 $('#contactBtn2').click(function(element){
-$('#about, #portfolio, #contact, #skills, #home').fadeOut('slow').promise().done(function(){
+$('#about, #portfolio, #contact, #resume, #home').fadeOut('slow').promise().done(function(){
 	$('#contact').fadeIn('slow');
+});
+});
+
+$('#resumeBtn2').click(function(element){
+$('#about, #portfolio, #contact, #resume, #home').fadeOut('slow').promise().done(function(){
+	$('#resume').fadeIn('slow');
 });
 });
