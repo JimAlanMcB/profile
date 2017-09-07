@@ -1,11 +1,9 @@
 // todo :
 // delete eval function and replace
-// some refactoring needs to be completed. 
-// users can input special characters and should not be able to. 
+// some refactoring needs to be completed.
+// users can input special characters and should not be able to.
 // color scheme needs adjustment
-
-
-
+// Major refactoring needed, most basic caculator currently. 
 
 var btn = document.querySelector("div");
 
@@ -16,7 +14,7 @@ btn.addEventListener("click", function(event) {
     elementClicked.className === "col-xs-3 cButton" ||
     elementClicked.className === "col-xs-6 cButton"
   ) {
-   }
+  }
 });
 
 var clearBtn = document.getElementById("clearBtn");
@@ -81,22 +79,38 @@ equalBtn.addEventListener("click", function(event) {
 
 var plusBtn = document.getElementById("plusBtn");
 plusBtn.addEventListener("click", function(event) {
-  document.getElementById("viewArea").innerHTML += " + ";
+  if (viewArea.innerHTML === "+") {
+    viewArea.innerHTML = "";
+  } else {
+    document.getElementById("viewArea").innerHTML += "+";
+  }
 });
 
 var minusBtn = document.getElementById("minusBtn");
 minusBtn.addEventListener("click", function(event) {
-  document.getElementById("viewArea").innerHTML += " - ";
+  if (viewArea.innerHTML === "-") {
+    viewArea.innerHTML = "";
+  } else {
+    document.getElementById("viewArea").innerHTML += "-";
+  }
 });
 
 var divideBtn = document.getElementById("divideBtn");
 divideBtn.addEventListener("click", function(event) {
-  document.getElementById("viewArea").innerHTML += " / ";
+  if (viewArea.innerHTML === "/") {
+    viewArea.innerHTML = "";
+  } else {
+    document.getElementById("viewArea").innerHTML += "/";
+  }
 });
 
 var multiplyBtn = document.getElementById("multiplyBtn");
 multiplyBtn.addEventListener("click", function(event) {
-  document.getElementById("viewArea").innerHTML += " * ";
+  if (viewArea.innerHTML === "*") {
+    viewArea.innerHTML = "";
+  } else {
+    document.getElementById("viewArea").innerHTML += "*";
+  }
 });
 // var percentBtn = document.getElementById("percentBtn");
 // percentBtn.addEventListener("click", function(event) {
