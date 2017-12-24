@@ -196,7 +196,7 @@ portPage.innerHTML=`
 	  </div>
 
 	  <div class="col-lg-3">Plain JS Caculator
-		<p><a href="https://jimalanmcb.github.io/profile/CaculateThis" target="_blank" id="port-link"><img src="CaculateThis.jpg" class="img-thumbnail"  alt="CaculateThis" width="304" height="236"></a></img>
+		<p><a href="https://jimalanmcb.github.io/profile/CaculateThis" target="_blank" id="port-link"><img src="CaculateThis.png" class="img-thumbnail"  alt="CaculateThis" width="304" height="236"></a></img>
 		</p>
 	  </div>
 
