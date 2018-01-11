@@ -1,0 +1,80 @@
+<div class="row">
+                                      <div class="col-xs-3">                           
+                                    <h3>Dogtopia Fantasy League</h3>
+                                    <p class="description">
+                                        <form method="post" action="https://poll.pollcode.com/36946914">
+                                            <div style="background-color:#5b6770;padding:2px;width:282px;font-family:Trebuchet MS;font-size:medium;color:#ff8200;box-shadow: 0px 0px 5px #888;">
+                                                <div style="padding:2px 0px 4px 2px;"><strong>Who is your fantasy canine-coach for the week?</strong></div><input
+                                                    type="radio" name="answer" value="1" id="answer369469141" style="float:left;"
+                                                /><label for="answer369469141" style="float:left;width:257px;">Canine Coach #1</label>
+                                                <div
+                                                    style="clear:both;height:2px;"></div><input type="radio" name="answer" value="2" id="answer369469142" style="float:left;"
+                                            /><label for="answer369469142" style="float:left;width:257px;">Canine Coach #2</label>
+                                            <div
+                                                style="clear:both;height:2px;"></div><input type="radio" name="answer" value="3" id="answer369469143" style="float:left;"
+                                /><label for="answer369469143" style="float:left;width:257px;">Canine Coach #3</label>
+                                <div
+                                    style="clear:both;height:2px;"></div><input type="radio" name="answer" value="4" id="answer369469144" style="float:left;"
+                            /><label for="answer369469144" style="float:left;width:257px;">Canine Coach #4</label>
+                            <div style="clear:both;height:2px;"></div>
+                            <div align="center" style="padding:3px;"><input type="submit" value=" Vote ">&nbsp;<input type="submit" name="view" value=" View "></div>
+                            
+                                                    
+
+                    </div>
+                    </form>
+                    </p></div>
+                    <div class="card col-xs-3">
+                            <img src="https://i.imgur.com/J7XLFRX.jpg" style="width:100%">
+                            <div class="container"> 
+                                <h3>John Doe</h3>
+                                <p>Position: Canine Coach</p>
+                                <p>Years on Team Dogtopia: 2</p>
+                                <p>Must love dogs</p>
+                            </div>
+                    </div>
+                    <div class="card col-xs-3">
+                            <img src="http://dunes-calumetaudubon.org/wp-content/uploads/2014/04/women-and-dogs.jpg" style="width:100%">
+                            <div class="container"> 
+                                <h3>Jane Doe</h3>
+                                <p>Position: Canine Coach</p>
+                                <p>Years on Team Dogtopia: 2</p>
+                                <p>Must love dogs</p>
+                            </div>
+                    </div>
+                    <div class="card col-xs-3">
+                            <img src="http://highclassk9.com/wp-content/uploads/2013/07/girl_two-520x3781.png" style="width:100%">
+                            <div class="container"> 
+                                <h3>Julie Doe</h3>
+                                <p>Position: Canine Coach</p>
+                                <p>Years on Team Dogtopia: 2</p>
+                                <p>Must love dogs</p>
+                            </div>
+                    </div>
+
+                    </div>
+
+                    </p>
+                    <!--<p class="cta-wrapper"><a class="btn btn-large white-button" href="/dog-daycare/">Learn more<i class="fa fa-chevron-right"></i></a></p> -->
+                </div>
+
+
+
+
+                
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            max-width: 300px;
+        }
+        /* On mouse-over, add a deeper shadow */
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        /* Add some padding inside the card container */
+
+        .container {
+            padding: 2px 16px;
+        }
