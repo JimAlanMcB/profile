@@ -12,7 +12,7 @@ var audioHy = new Audio("sounds/hyena.mp3");
 Audio.prototype.stop = function () {
     this.pause();
     this.currentTime = 0.0;
-}
+};
 
 function stopAudio() {
 
