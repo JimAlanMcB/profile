@@ -57,7 +57,7 @@ btnR.addEventListener("click", function hR() {
   }
 });
 
-btnY.addEventListener("click", function() {
+btnY.addEventListener("click", function hY() {
   //yellow
   if (!power) {
     return;
