@@ -2,7 +2,7 @@ body {
     font-family: 'Raleway', sans-serif;
     background: #13d85e;
     background-image: url("background.jpg");
-    background-size: auto;
+    background-size: cover;
     color: #222;
 }
 
@@ -26,7 +26,13 @@ body {
     text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 40px;
 }
-
+.footer {
+  margin-top: 10px;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  color: #79e00e;
+  font-size: 20px;
+}
 .card {
     display: flex;
     flex-direction: column;
@@ -81,6 +87,10 @@ span {
 h3 {
     font-family: 'Raleway', sans-serif;
     padding-left: 10px;
+}
+
+h4 {
+  line-height: 1px;
 }
 
 .picture {
