@@ -175,26 +175,23 @@ portPage.innerHTML=`
   <div class="container">
 	<div class="row">
 
-	  <div class="col-lg-3">Random Quote Generator
+<!--	  <div class="col-lg-3">Random Quote Generator
 		<p> <a href="https://codepen.io/alancode/full/MvKJPK/" target="_blank" id="port-link"><img src="rqm.jpg" class="img-thumbnail"  alt="Random Quote Machine" width="304" height="236"></a><img>
 		</p>
-	  </div>
-
+	  </div> -->
 	<!--  <div class="col-lg-3">Weather App
 		<p><a href="https://codepen.io/alancode/full/gxMrrO/" target="_blank" id="port-link"><img src="weather.jpg" class="img-thumbnail" alt="WeatherApp" width="304" height="236"></a></img>
 		</p>
 	  </div> -->
-
-	  <div class="col-lg-3">Wiki Viewer
+	  
+	  <!-- <div class="col-lg-3">Twitch JSON API
+		<p><a href="https://codepen.io/alancode/full/zdBRrR/" target="_blank" id="port-link"><img src="twitch.jpg" class="img-thumbnail"  alt="Twitch JSON Api" width="304" height="236"></a></img>
+		</p>
+		</div> -->
+		<div class="col-lg-3">Wiki Viewer
 		<p><a href="https://codepen.io/alancode/full/ZJOaVg/" target="_blank" id="port-link"><img src="wiki.jpg" class="img-thumbnail" alt="Wiki Viewer" width="304" height="236"></a></img>
 		</p>
 	  </div>
-
-	  <div class="col-lg-3">Twitch JSON API
-		<p><a href="https://codepen.io/alancode/full/zdBRrR/" target="_blank" id="port-link"><img src="twitch.jpg" class="img-thumbnail"  alt="Twitch JSON Api" width="304" height="236"></a></img>
-		</p>
-	  </div>
-
 	  <div class="col-lg-3">Plain JS Caculator
 		<p><a href="https://jimalanmcb.github.io/profile/CaculateThis" target="_blank" id="port-link"><img src="CaculateThis.png" class="img-thumbnail"  alt="CaculateThis" width="304" height="236"></a></img>
 		</p>
@@ -213,7 +210,8 @@ portPage.innerHTML=`
 	  <div class="col-lg-3">Simon
 		<p><a href="https://jimalanmcb.github.io/profile/Simon" target="_blank" id="port-link"><img src="simon.png" class="img-thumbnail"  alt="Simon" width="304" height="236"></a></img>
 		</p>
-	  </div>
+		</div>
+				
 
 
 
