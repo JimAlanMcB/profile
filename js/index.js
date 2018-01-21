@@ -147,6 +147,8 @@ conPage.innerHTML = `<div id="contactme">
 	  target="_blank">
 <span class="fa fa-linkedin"></span></a></li>
   <li><a class="btn btn-social-icon btn-lg btn-github" href="https://jimalanmcb.github.io/profile" target="_blank">
+	<span class="fa fa-github"></span></a></li>
+	<li><a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/JimAlanMcB" target="_blank">
   <span class="fa fa-github"></span></a></li>
   <li><a class="btn btn-social-icon btn-lg btn-codepen" href="https://codepen.io/alancode" target="_blank">
   <span class="fa fa-codepen"></span></a></li>
@@ -157,7 +159,8 @@ conPage.innerHTML = `<div id="contactme">
   <li><a href="https://www.twitter.com/alancode">@alancode</a></li>
   <li><a href="https://www.facebook.com">alanmcbrayer86</a></li>
   <li><a href="https://www.linkedin.com/in/jim-mcbrayer-1768a557/">jimalanmcb</a></li>
-  <li><a href="https://jimalanmcb.github.io/profile">jimalanmcb.github.io</a></li>
+	<li><a href="https://jimalanmcb.github.io/profile">jimalanmcb.github.io</a></li>
+	<li><a href="https://github.com/JimAlanMcB">GitHub</a></li>
   <li><a href="https://codepen.io/alancode">alancode</a></li>
   <li><a href="mailto:alancode@gmail.com">alancode@gmail.com</a></li>
 </ul>
