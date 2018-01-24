@@ -147,6 +147,8 @@ conPage.innerHTML = `<div id="contactme">
 	  target="_blank">
 <span class="fa fa-linkedin"></span></a></li>
   <li><a class="btn btn-social-icon btn-lg btn-github" href="https://jimalanmcb.github.io/profile" target="_blank">
+	<span class="fa fa-github"></span></a></li>
+	<li><a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/JimAlanMcB" target="_blank">
   <span class="fa fa-github"></span></a></li>
   <li><a class="btn btn-social-icon btn-lg btn-codepen" href="https://codepen.io/alancode" target="_blank">
   <span class="fa fa-codepen"></span></a></li>
@@ -157,7 +159,8 @@ conPage.innerHTML = `<div id="contactme">
   <li><a href="https://www.twitter.com/alancode">@alancode</a></li>
   <li><a href="https://www.facebook.com">alanmcbrayer86</a></li>
   <li><a href="https://www.linkedin.com/in/jim-mcbrayer-1768a557/">jimalanmcb</a></li>
-  <li><a href="https://jimalanmcb.github.io/profile">jimalanmcb.github.io</a></li>
+	<li><a href="https://jimalanmcb.github.io/profile">jimalanmcb.github.io</a></li>
+	<li><a href="https://github.com/JimAlanMcB">GitHub</a></li>
   <li><a href="https://codepen.io/alancode">alancode</a></li>
   <li><a href="mailto:alancode@gmail.com">alancode@gmail.com</a></li>
 </ul>
@@ -173,54 +176,58 @@ portPage.innerHTML=`
 <p>
 
   <div class="container">
-	<div class="row">
+		<div class="row">
 
-	  <div class="col-lg-3">Random Quote Generator
-		<p> <a href="https://codepen.io/alancode/full/MvKJPK/" target="_blank" id="port-link"><img src="rqm.jpg" class="img-thumbnail"  alt="Random Quote Machine" width="304" height="236"></a><img>
-		</p>
-	  </div>
-
-	<!--  <div class="col-lg-3">Weather App
-		<p><a href="https://codepen.io/alancode/full/gxMrrO/" target="_blank" id="port-link"><img src="weather.jpg" class="img-thumbnail" alt="WeatherApp" width="304" height="236"></a></img>
+		<!--	  <div class="col-lg-3">Random Quote Generator
+		<p> <a href="https://codepen.io/alancode/full/MvKJPK/" target="_blank" id="port-link"><img src="images/rqm.jpg" class="img-thumbnail"  alt="Random Quote Machine" width="304" height="236"></a><img>
 		</p>
 	  </div> -->
+			<!--  <div class="col-lg-3">Weather App
+		<p><a href="https://codepen.io/alancode/full/gxMrrO/" target="_blank" id="port-link"><img src="images/weather.jpg" class="img-thumbnail" alt="WeatherApp" width="304" height="236"></a></img>
+		</p>
+	  </div> -->
+	  
+	  <!-- <div class="col-lg-3">Twitch JSON API
+		<p><a href="https://codepen.io/alancode/full/zdBRrR/" target="_blank" id="port-link"><img src="images/twitch.jpg" class="img-thumbnail"  alt="Twitch JSON Api" width="304" height="236"></a></img>
+		</p>
+		</div> -->
 
-	  <div class="col-lg-3">Wiki Viewer
-		<p><a href="https://codepen.io/alancode/full/ZJOaVg/" target="_blank" id="port-link"><img src="wiki.jpg" class="img-thumbnail" alt="Wiki Viewer" width="304" height="236"></a></img>
+		<div class="col-lg-3">Animal Card Project
+		<p><a href="https://jimalanmcb.github.io/profile/GwG/animalcard" target="_blank" id="port-link"><img src="images/animalcard.jpg" class="img-thumbnail" alt="Animal Card" width="304" height="236"></a></img>
 		</p>
 	  </div>
 
-	  <div class="col-lg-3">Twitch JSON API
-		<p><a href="https://codepen.io/alancode/full/zdBRrR/" target="_blank" id="port-link"><img src="twitch.jpg" class="img-thumbnail"  alt="Twitch JSON Api" width="304" height="236"></a></img>
+		<div class="col-lg-3">Wiki Viewer
+		<p><a href="https://codepen.io/alancode/full/ZJOaVg/" target="_blank" id="port-link"><img src="images/wiki.jpg" class="img-thumbnail" alt="Wiki Viewer" width="304" height="236"></a></img>
 		</p>
 	  </div>
-
 	  <div class="col-lg-3">Plain JS Caculator
-		<p><a href="https://jimalanmcb.github.io/profile/CaculateThis" target="_blank" id="port-link"><img src="CaculateThis.png" class="img-thumbnail"  alt="CaculateThis" width="304" height="236"></a></img>
+		<p><a href="https://jimalanmcb.github.io/profile/CaculateThis" target="_blank" id="port-link"><img src="images/CaculateThis.png" class="img-thumbnail"  alt="images/CaculateThis" width="304" height="236"></a></img>
 		</p>
 	  </div>
 
 	  <div class="col-lg-3">Pomodoro Clock
-		<p><a href="https://jimalanmcb.github.io/profile/Pomodoro" target="_blank" id="port-link"><img src="pomo.jpg" class="img-thumbnail"  alt="Pomodoro Clock" width="304" height="236"></a></img>
+		<p><a href="https://jimalanmcb.github.io/profile/Pomodoro" target="_blank" id="port-link"><img src="images/pomo.jpg" class="img-thumbnail"  alt="Pomodoro Clock" width="304" height="236"></a></img>
 		</p>
 	  </div>
 
-	  <div class="col-lg-3">TicTacToe
-		<p><a href="https://jimalanmcb.github.io/profile/Tictactoe" target="_blank" id="port-link"><img src="tictactoe.png" class="img-thumbnail"  alt="TicTacToe" width="304" height="236"></a></img>
+	</div> <!-- row1 end -->
+	
+	<div class="row">
+
+	<div class="col-lg-3">TicTacToe
+		<p><a href="https://jimalanmcb.github.io/profile/Tictactoe" target="_blank" id="port-link"><img src="images/tictactoe.png" class="img-thumbnail"  alt="TicTacToe" width="304" height="236"></a></img>
 		</p>
 	  </div>
 
-	  <div class="col-lg-3">Simon
-		<p><a href="https://jimalanmcb.github.io/profile/Simon" target="_blank" id="port-link"><img src="simon.png" class="img-thumbnail"  alt="Simon" width="304" height="236"></a></img>
+	  <div class="col-lg-3">Simon Game
+		<p><a href="https://jimalanmcb.github.io/profile/Simon" target="_blank" id="port-link"><img src="images/simon.png" class="img-thumbnail"  alt="Simon" width="304" height="236"></a></img>
 		</p>
-	  </div>
-
-
-
+		</div>
 
 	</div>
-	<!--row-->
-  </div>
+	<!--row 2 end -->
+</div> <!-- container -- >
 `;
 
 var aboutPage = document.getElementById("about");
@@ -230,7 +237,7 @@ aboutPage.innerHTML= `
 <h1>About</h1>
 <!-- <div class="row">
   <div class="col-lg-3">Free Code Camp Front-End Certification
-	<p><a href="https://www.freecodecamp.com/jimalanmcb/front-end-certification" target="_blank" id="port-link"><img src="jimfcccert.png" class="img-thumbnail"  alt="FCC Cert" width="304" height="236"></a></img>
+	<p><a href="https://www.freecodecamp.com/jimalanmcb/front-end-certification" target="_blank" id="port-link"><img src="images/jimfcccert.png" class="img-thumbnail"  alt="FCC Cert" width="304" height="236"></a></img>
 	</p>
   </div>
 </div> -->
