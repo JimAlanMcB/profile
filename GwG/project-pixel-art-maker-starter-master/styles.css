@@ -1,0 +1,142 @@
+body {
+    text-align: center;
+    background-color: rgb(88, 88, 88);
+    color: #ffff00;
+    text-shadow: 2px 1px 0px rgba(255, 0, 5, 0.84);
+    background-image: url(bg.jpg);
+    font-family: 'VT323', monospace;
+}
+
+h1 {
+    font-family: Monoton;
+    font-weight: bold;
+    font-size: 80px;
+    margin: 0.2em;
+    color: rgb(255, 204, 0);
+    text-shadow: 2px 2px 0px rgba(255, 0, 5, 0.84);
+    text-decoration: underline;
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+    font-size: 50px;
+}
+
+table,
+tr,
+td {
+    border: 1px solid white;
+}
+
+table {
+    border: 2px solid rgba(255, 0, 5, 0.84);
+    width: 85%;
+    height: -webkit-fill-available;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 1px;
+}
+
+td {
+    cursor: pointer;
+    background-color: black;
+    width: 1px;
+}
+td:hover{
+    background-color: #ffffff93;
+}
+
+input[type=number] {
+    width: 6em;
+    color: rgb(255, 204, 0);
+    font-size: 16px;
+    padding: 4px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background: rgb(177, 0, 0);
+    background: -moz-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -webkit-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -o-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -ms-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: linear-gradient(0deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    -webkit-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+}
+
+input[type=submit] {
+    color: rgb(255, 204, 0);
+    font-size: 16px;
+    padding: 4px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background: rgb(177, 0, 0);
+    background: -moz-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -webkit-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -o-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -ms-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: linear-gradient(0deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    -webkit-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+}
+input[type=submit]:hover {
+    cursor: pointer;
+    color: rgb(243, 255, 6);
+    font-size: 16px;
+    padding: 4px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background: rgb(237, 178, 178);
+    background: -moz-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -webkit-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -o-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -ms-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: linear-gradient(0deg, rgb(250, 20, 20) 0% rgb(177, 0, 0) 51%);
+    -webkit-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+}
+.retroBtn{
+    color: rgb(255, 204, 0);
+    margin-bottom: 0.3em;
+    font-size: 30px;
+    padding: 4px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background: rgb(177, 0, 0);
+    background: -moz-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -webkit-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -o-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -ms-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: linear-gradient(0deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    -webkit-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+}
+.retroBtn:hover{
+    cursor: pointer;
+    color: rgb(243, 255, 6);
+    font-size: 30px;
+    padding: 4px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background: rgb(237, 178, 178);
+    background: -moz-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -webkit-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -o-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -ms-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: linear-gradient(0deg, rgb(250, 20, 20) 0% rgb(177, 0, 0) 51%);
+    -webkit-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+}
+#sizePicker{
+font-size: 30px;
+}
+input:hover{
+    cursor: pointer;
+}
+
