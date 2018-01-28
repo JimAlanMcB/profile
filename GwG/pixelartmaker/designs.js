@@ -50,17 +50,18 @@ function paintStop() {
     console.log("turning off");
     isDragging = false;
 }
+$('body').bind('touchstart', function(){});
 
 $(function () {
     
-    $('table').dblclick(function () {
+    $('table').on('dblclick touchstart', function () {  //.dblclick(function ())
 
         if (isDragging) {
             paintStop();
             isDragging = false;
         }
         else
-            $('td').mousemove(function () {
+            $('td').on('mousemove', function () { //.mousemove
                 $(this).css('background-color', color);
                 isDragging = true;
             });
@@ -68,7 +69,7 @@ $(function () {
 });
 
 
-$('table').on('click', 'td', function () {
+$('table').on('click touchstart', 'td', function () {
     console.log(this);
     $(this).css('background-color', color);
 });
