@@ -23,10 +23,10 @@ function makeGrid(values) {
     let width = values[1].value;
 
     for (i = 1; i <= height; i++) {
-        $('table').append('<tr class="row ' + i + '"></tr>');
+        $('table').append('<tr></tr>');
     }
     for (x = 1; x <= width; x++) {
-        $('tr').append('<td class="column ' + x + '"></td>');
+        $('tr').append('<td></td>');
 
     }
 
@@ -53,7 +53,7 @@ function paintStop() {
 
 $(function () {
     
-    $('td').dblclick(function () {
+    $('table').dblclick(function () {
 
         if (isDragging) {
             paintStop();
