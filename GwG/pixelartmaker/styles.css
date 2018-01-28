@@ -34,8 +34,8 @@ td {
 
 table {
     border: 2px solid rgba(255, 0, 5, 0.84);
-    width: 85%;
-    height: -webkit-fill-available;
+    min-width: 800px;
+    min-height: 800px;
     border-collapse: collapse;
     margin: 0 auto;
 }
