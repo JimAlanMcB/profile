@@ -146,3 +146,12 @@ input[type=submit]:hover {
 input:hover {
     cursor: pointer;
 }
+div{
+    margin: 0 auto;
+    max-width: 200px;
+    margin-bottom: 0.3em;
+}
+.bold_header{
+
+   font-size: 40px;
+}
