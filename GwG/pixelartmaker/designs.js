@@ -12,6 +12,7 @@ $('#sizePicker').submit(function () {
     makeGrid(values);
 });
 $('.retroBtn').click(function () {
+    paintStop();
     $('td').css('background-color', '#000000');
 });
 
@@ -38,40 +39,37 @@ $('#colorPicker').change(function () {
     color = $(this).val();
     return color;
 });
+let isDragging = false;
 
+function paintStop() {
+   
+    $('td').mousemove(function () {
+       
+
+    }).off('mousemove');
+    console.log("turning off");
+    isDragging = false;
+}
 
 $(function () {
-    let isDragging = false;
     
     $('td').dblclick(function () {
+
         if (isDragging) {
-            console.log("is already dragging");
-            $('td').mousemove(function () {
-                console.log("turning off");
-
-            }).off('mousemove');
+            paintStop();
             isDragging = false;
-
-        } else {
-
+        }
+        else
             $('td').mousemove(function () {
                 $(this).css('background-color', color);
-                console.log(isDragging + " mouse move");
                 isDragging = true;
             });
-
-        }
-        console.log(isDragging);
-        // colorDrag();
-
     });
 });
 
 
-
 $('table').on('click', 'td', function () {
     console.log(this);
-    isDragging = false;
     $(this).css('background-color', color);
 });
 
