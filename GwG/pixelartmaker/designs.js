@@ -22,10 +22,10 @@ function makeGrid(values) {
         $('table').append('<tr class="row ' + i + '"></tr>');
     }
     for (x = 1; x <= width; x++) {
-        $('tr').append('<td class="column '+ x +'"></td>');
-        
+        $('tr').append('<td class="column ' + x + '"></td>');
+
     }
-   
+
     //Takes values from sizePicker and creates a table
 
     console.log(height, width);
@@ -35,9 +35,9 @@ $('#colorPicker').change(function () {
     color = $(this).val();
     return color;
 });
-$('table').on('click','td', function () {
+$('table').on('click', 'td', function () {
     console.log(this);
     $(this).css('background-color', color);
 });
 
-// Nice! Made it with no cheating!
+// Nice!

@@ -49,7 +49,8 @@ td {
     background-color: black;
     width: 1px;
 }
-td:hover{
+
+td:hover {
     background-color: #ffffff93;
 }
 
@@ -85,6 +86,7 @@ input[type=submit] {
     -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
     box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
 }
+
 input[type=submit]:hover {
     cursor: pointer;
     color: rgb(243, 255, 6);
@@ -101,7 +103,8 @@ input[type=submit]:hover {
     -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
     box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
 }
-.retroBtn{
+
+.retroBtn {
     color: rgb(255, 204, 0);
     margin-bottom: 0.3em;
     font-size: 30px;
@@ -117,7 +120,8 @@ input[type=submit]:hover {
     -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
     box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
 }
-.retroBtn:hover{
+
+.retroBtn:hover {
     cursor: pointer;
     color: rgb(243, 255, 6);
     font-size: 30px;
@@ -133,10 +137,11 @@ input[type=submit]:hover {
     -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
     box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
 }
-#sizePicker{
-font-size: 30px;
-}
-input:hover{
-    cursor: pointer;
+
+#sizePicker {
+    font-size: 30px;
 }
 
+input:hover {
+    cursor: pointer;
+}
