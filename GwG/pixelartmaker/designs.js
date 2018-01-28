@@ -1,27 +1,35 @@
-// Select color input
-// Select size input
+/* To do:
+Add touch drag 
+Add a save feature to export the html and save it to a file. 
+...bug fixes?
+refactor
 
-let color = '#ffff00';
+*/
+
+
+
+
+let color = '#ffff00'; // defined a default color as a global 
 
 // When size is submitted by the user, call makeGrid()
-$('#sizePicker').submit(function () {
+$('#sizePicker').submit(function () { // gets the size from #sizePicker form, and turns it into an array, then makes the grid with the values. 
     let values = $(this).serializeArray();
     event.preventDefault();
     $('tr').remove();
     //console.log(values);
     makeGrid(values);
 });
-$('.retroBtn').click(function () {
+$('.retroBtn').click(function () { // This button resets everything, stops the painting and removes all TD's. Should have named it something other than retroBtn
     paintStop();
     $('td').css('background-color', '#000000');
 });
 
 
 function makeGrid(values) {
-
+    // Could have used #inputHeight, and #inputWeight This just gets the first and second index of values which is the submitted array of form size. 
     let height = values[0].value;
     let width = values[1].value;
-
+    // Makes a grid with the height and weight inputs. Could have used a nested for loop. 
     for (i = 1; i <= height; i++) {
         $('table').append('<tr></tr>');
     }
@@ -37,30 +45,30 @@ function makeGrid(values) {
 
 $('#colorPicker').change(function () {
     color = $(this).val();
-    return color;
+    return color; // returns the color from the #colorPicker, this being the colorpicker form
 });
-let isDragging = false;
 
-function paintStop() {
-   
+let isDragging = false; // global for "double click" to paint instead of constant clicking 
+
+function paintStop() { // function to stop the mousemove painting. It uses .off('mousemove') at the end to turn the mousemove listener off. This was the first way I could figure out how to turn it off
+
     $('td').mousemove(function () {
-       
+
 
     }).off('mousemove');
     console.log("turning off");
     isDragging = false;
 }
-$('body').bind('touchstart', function(){});
+$('body').bind('touchstart', function () {}); // TESTING touchdevices
 
-$(function () {
-    
-    $('table').on('dblclick touchstart', function () {  //.dblclick(function ())
+$(function () { 
+// gets the dblclick from the 'table' and starts the mouse move which just changes the css property
+    $('table').on('dblclick touchstart', function () { //.dblclick(function ())
 
         if (isDragging) {
             paintStop();
             isDragging = false;
-        }
-        else
+        } else
             $('td').on('mousemove', function () { //.mousemove
                 $(this).css('background-color', color);
                 isDragging = true;
@@ -71,11 +79,13 @@ $(function () {
 
 $('table').on('click touchstart', 'td', function () {
     console.log(this);
-    $(this).css('background-color', color);
+    $(this).css('background-color', color); // this is for just clicking, instead of moving and painting changes the color of this(being the td)
 });
 
 // Nice!
 
+
+// I painted a star wars default picture, and this just resets it if needed. 
 $('.starWarsBtn').click(function () {
     $('table').html(`<tbody>'
 
