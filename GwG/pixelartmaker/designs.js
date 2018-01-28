@@ -49,23 +49,30 @@ $('#colorPicker').change(function () {
 });
 
 let isDragging = false; // global for "double click" to paint instead of constant clicking 
+let isErasing = false;
 
 function paintStop() { // function to stop the mousemove painting. It uses .off('mousemove') at the end to turn the mousemove listener off. This was the first way I could figure out how to turn it off
 
-    $('td').mousemove(function () {
-
-
-    }).off('mousemove');
+    $('td').mousemove(function () {}).off('mousemove');
     console.log("turning off");
     isDragging = false;
 }
-$('body').bind('touchstart', function () {}); // TESTING touchdevices
+function eraseStop() { // function to stop the mousemove painting. It uses .off('mousemove') at the end to turn the mousemove listener off. This was the first way I could figure out how to turn it off
+
+    $('td').mousemove(function () {}).off('mousemove');
+    console.log("turning off");
+    isErasing = false;
+}
+//$('body').bind('touchstart', function () {}); // TESTING touchdevices
 
 $(function () { 
 // gets the dblclick from the 'table' and starts the mouse move which just changes the css property
-    $('table').on('dblclick touchstart', function () { //.dblclick(function ())
+    $('table').on('dblclick touchstart', function (e) { //.dblclick(function ())
 
-        if (isDragging) {
+        if(e.which === 3){
+            return;
+        }
+        else if(isDragging){
             paintStop();
             isDragging = false;
         } else
@@ -83,7 +90,24 @@ $('table').on('click touchstart', 'td', function () {
 });
 
 // Nice!
-
+$('table').on('mousedown', 'td', function(event){
+    
+    if(event.which === 3){
+        // event.preventDefault();     
+        // event.stopImmediatePropagation(); // not working, not sure why. Having to use contextmenu turn off
+        if(isErasing){
+            eraseStop();
+            isErasing = false;
+        }
+        else {
+        $('td').on('mousemove', function(){
+            $(this).css('background-color', '#000000');
+            isErasing = true;
+        });
+    }
+        
+    }
+});
 
 // I painted a star wars default picture, and this just resets it if needed. 
 $('.starWarsBtn').click(function () {

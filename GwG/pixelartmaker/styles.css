@@ -150,8 +150,13 @@ div{
     margin: 0 auto;
     max-width: 200px;
     margin-bottom: 0.3em;
+    text-align: left;
 }
 .bold_header{
-
+  
    font-size: 40px;
 }
+ul {
+    
+    list-style-type: none;
+  }
