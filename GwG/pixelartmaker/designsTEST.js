@@ -1,56 +1,172 @@
-<!DOCTYPE html>
-<html>
+/* To do:
+Add touch drag 
+Add a save feature to export the html and save it to a file. 
+...bug fixes?
+refactor
 
-<head>
-    <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+*/
 
 
-</head>
 
-<body>
-    <h1>Pixel Art Maker</h1>
+let height = document.getElementById('inputHeight').value;
+let width = document.getElementById('inputWeight').value;
+let color = colorPicker.value;
+//let color = '#ffff00'; // defined a default color as a global 
+
+// When size is submitted by the user, call makeGrid()
+$('#sizePicker').submit(function () { // gets the size from #sizePicker form, and turns it into an array, then makes the grid with the values. 
+    let values = $(this).serializeArray();
+    event.preventDefault();
+    $('tr').remove();
+    //console.log(values);
+    makeGrid(values);
+    return values;
+});
+
+$('.retroBtn').click(function (values) { // This button resets everything, stops the painting and removes all TD's. Should have named it something other than retroBtn
+    $('tr').remove();
+    makeGrid(values);
+    paintStop();
+    //$('td').css('background-color', 'transparent');
+});
 
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="50"> Grid Width:
-        <input type="number" id="inputWeight" name="width" min="1" value="50">
-
-        <input type="submit" value="START">
-    </form>
-
-    <h2>Pick A Color</h2>
-    <!-- <input type="color" id="colorPicker" value="#ffff00"> -->
-    <input class="jscolor" id="colorPicker">
-    <!-- Using JScolor -->
 
 
-    <h2 class="bold_header">Instructions:</h2>
-    <div>
-            
-        <ul>
-            <li>1) Choose your color, and click anywhere to paint.</li>
-            <li>2) Double click and move your mouse to paint multiple squares!</li>
-            <li>3) Double click again to turn it off!</li>
-            <li>4) Right click to Erase, and right click again to stop erasing!</li>
 
-        </ul>
-    </div>
 
-    <button class="retroBtn">RESTART</button>
-    <button class="retroBtn starWarsBtn">STAR WARS</button>
-    <!-- <button id="save" class="retroBtn">SAVE</button>  for save feature       
-    <div id="savedArt" class="saved_art"></div> -->
-    <h2>Pixel Canvas</h2>
-    <table id="pixelCanvas" oncontextmenu="return false;">
-        <tbody>
+
+function makeGrid(values) {
+    // Could have used #inputHeight, and #inputWeight This just gets the first and second index of values which is the submitted array of form size. 
+    // let height = values[0].value;
+    // let width = values[1].value;
+    // Makes a grid with the height and weight inputs. Could have used a nested for loop. 
+    const table = document.getElementById('pixelCanvas');
+    const colorPicker = document.getElementById('colorPicker');
+
+
+    for (let i = 0; i <= height; i++) {
+        const row = table.insertRow(i);
+        row.setAttribute('row', i);
+        for (let j = 0; j < width; j++) {
+            const cell = row.insertCell(j);
+            cell.setAttribute('cell', j);
+            cell.addEventListener('mousedown', (e) => {
+                cell.style.backgroundColor = colorPicker.value;
+
+            });
+            cell.addEventListener('mousemove', (e) => { //.mousemove
+                cell.style.backgroundColor = colorPicker.value;
+                isDragging = true;
+            });
+        }
+    }
+
+    // for (i = 1; i <= height; i++) {
+    //     $('table').append('<tr id="pixelCanvas"></tr>');
+    // }
+    // for (x = 1; x <= width; x++) {
+    //     $('tr').append('<td id="pixelCanvas"></td>');
+
+    // }
+
+    //Takes values from sizePicker and creates a table
+
+
+}
+
+
+
+// $('#colorPicker').change(function () {
+//     color = $(this).val();
+//     return color; // returns the color from the #colorPicker, this being the colorpicker form
+// });
+
+let isDragging = false; // global for "double click" to paint instead of constant clicking 
+let isErasing = false;
+
+function paintStop() { // function to stop the mousemove painting. It uses .off('mousemove') at the end to turn the mousemove listener off. This was the first way I could figure out how to turn it off
+
+    $('td').mousemove(function () {}).off('mousemove');
+    console.log("turning off");
+    isDragging = false;
+}
+
+function eraseStop() { // function to stop the mousemove painting. It uses .off('mousemove') at the end to turn the mousemove listener off. This was the first way I could figure out how to turn it off
+
+    $('td').mousemove(function () {}).off('mousemove');
+    console.log("turning off");
+    isErasing = false;
+}
+//$('body').bind('touchstart', function () {}); // TESTING touchdevices
+
+$(function () {
+    // gets the dblclick from the 'table' and starts the mouse move which just changes the css property
+    $('table').on('dblclick touchstart', function (e) { //.dblclick(function ())
+
+        if (e.which === 3) {
+            return;
+        } else if (isDragging) {
+            paintStop();
+            isDragging = false;
+        } else
+            $('td').on('mousemove', function () { //.mousemove
+                $(this).css('background-color', color);
+                isDragging = true;
+            });
+    });
+});
+
+
+// $('table').on('click touchstart', 'td', function () {
+//     console.log(this);
+//     $(this).css('background-color', color); // this is for just clicking, instead of moving and painting changes the color of this(being the td)
+// });
+
+// Nice!
+$('table').on('mousedown', 'td', function (event) {
+
+    if (event.which === 3) {
+        // event.preventDefault();     
+        // event.stopImmediatePropagation(); // not working, not sure why. Having to use contextmenu turn off
+        if (isErasing) {
+            eraseStop();
+            isErasing = false;
+        } else {
+            $('td').on('mousemove', function () {
+                $(this).css('background-color', '#000000');
+                isErasing = true;
+            });
+        }
+
+    }
+});
+
+function toggleLines() { // need to turn into toggle on and off
+    let canvasTable = $('table');
+    let canvasTd = $('td');
+    let canvasTr = $('tr');
+    $(canvasTable).css('border', 'none');
+    $(canvasTr).css('border', 'none');
+    $(canvasTd).css('border', 'none');
+}
+
+// let emptyCanvas = document.getElementById('pixelCanvas');  //// For saving canvas
+// console.log(emptyCanvas);
+// let savedArt = document.getElementById('savedArt');
+// $('#save').click(function () {
+//     toggleLines();
+
+//     html2canvas(emptyCanvas, {backgroundColor: 'white'}).then(canvas => {
+//         savedArt.appendChild(canvas);
+
+//     });
+
+// });
+
+// I painted a star wars default picture, and this just resets it if needed. 
+$('.starWarsBtn').click(function () {
+    $('table').html(`
 
             <tr class="row 1">
                 <td class="column 1"></td>
@@ -3187,36 +3303,7 @@
                 <td class="column 54"></td>
                 <td class="column 55"></td>
             </tr>
-        </tbody>
-    </table>
-    <ul>
-        <a class="btn btn-social-icon btn-lg btn-twitter" href="https://www.twitter.com/alancode" target="_blank">
-            <span class="fa fa-twitter"></span>
-        </a>
-        <a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.facebook.com" target="_blank">
-            <span class="fa fa-facebook"></span>
-        </a>
-        <a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.linkedin.com/in/alan-mcbrayer-1768a557/" target="_blank">
-            <span class="fa fa-linkedin"></span>
-        </a>
-        <a class="btn btn-social-icon btn-lg btn-github" href="https://jimalanmcb.github.io/profile" target="_blank">
-            <span class="fa fa-home"></span>
-        </a>
-        <a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/JimAlanMcB" target="_blank">
-            <span class="fa fa-github"></span>
-        </a>
-        <a class="btn btn-social-icon btn-lg btn-codepen" href="https://codepen.io/alancode" target="_blank">
-            <span class="fa fa-codepen"></span>
-        </a>
-        <a class="btn btn-social-icon btn-lg" href="mailto:alancode@gmail.com">
-            <span class="fa fa-envelope-o"></span>
-        </a>
-    </ul>
+        
+`);
 
-    <script src="designs.js"></script>
-    <script src="jscolor.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-
-</body>
-
-</html>
+});
