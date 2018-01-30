@@ -23,7 +23,7 @@
         <input type="number" id="inputHeight" name="height" min="1" value="50"> Grid Width:
         <input type="number" id="inputWeight" name="width" min="1" value="50">
 
-        <input type="submit" value="START">
+        <input type="submit" id="start" value="START">
     </form>
 
     <h2>Pick A Color</h2>
@@ -36,18 +36,20 @@
     <div>
             
         <ul>
-            <li>1) Choose your color, and click anywhere to paint.</li>
-            <li>2) Double click and move your mouse to paint multiple squares!</li>
-            <li>3) Double click again to turn it off!</li>
-            <li>4) Right click to Erase, and right click again to stop erasing!</li>
+            <li>1) Choose your color, Click Start, and click and drag to paint.</li>
+            <li>2) Right click to Erase!!</li>
+            <li>3) Toggle lines to toggle grid</li>
+            <li>4) Restart to...Restart</li>
+            <!-- <li>3) Click Save to Save your picture!</li> -->
 
         </ul>
     </div>
 
-    <button class="retroBtn">RESTART</button>
+    <button class="retroBtn" id="restart">RESTART</button>
     <button class="retroBtn starWarsBtn">STAR WARS</button>
-    <!-- <button id="save" class="retroBtn">SAVE</button>  for save feature       
-    <div id="savedArt" class="saved_art"></div> -->
+    <!-- <button id="save" class="retroBtn">SAVE</button>     -->
+    <button id="toggleBtn" class="retroBtn">TOGGLE LINES</button>     
+    <!-- <div id="savedArt" class="saved_art"></div> -->
     <h2>Pixel Canvas</h2>
     <table id="pixelCanvas" oncontextmenu="return false;">
         <tbody>
@@ -3213,7 +3215,7 @@
         </a>
     </ul>
 
-    <script src="designs.js"></script>
+    <script src="designsTEST.js"></script>
     <script src="jscolor.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 

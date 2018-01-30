@@ -1,5 +1,5 @@
 /* To do:
-Add touch drag 
+
 Add a save feature to export the html and save it to a file. 
 ...bug fixes?
 refactor
@@ -8,156 +8,129 @@ refactor
 
 
 
-let height = document.getElementById('inputHeight').value;
-let width = document.getElementById('inputWeight').value;
-let color = colorPicker.value;
-//let color = '#ffff00'; // defined a default color as a global 
 
-// When size is submitted by the user, call makeGrid()
-$('#sizePicker').submit(function () { // gets the size from #sizePicker form, and turns it into an array, then makes the grid with the values. 
-    let values = $(this).serializeArray();
+let color = colorPicker.value;
+let isDragging = false;
+let isErasing = false;
+let table = document.getElementById('pixelCanvas');
+let sizeSelection = document.getElementById('start');
+let restartGrid = document.getElementById('restart');
+let gridLines = true;
+
+
+
+let startGrid = () => {
+
     event.preventDefault();
     $('tr').remove();
-    //console.log(values);
-    makeGrid(values);
-    return values;
-});
+    let height = document.getElementById('inputHeight').value;
+    let width = document.getElementById('inputWeight').value;
+    makeGrid(height, width);
 
-$('.retroBtn').click(function (values) { // This button resets everything, stops the painting and removes all TD's. Should have named it something other than retroBtn
-    $('tr').remove();
-    makeGrid(values);
-    paintStop();
-    //$('td').css('background-color', 'transparent');
-});
+};
+sizeSelection.addEventListener('click', startGrid);
+restartGrid.addEventListener('click', startGrid);
+
+(function init() {
+
+    table.onmousedown = (e) => {
+        if (e.which === 1) {
+
+            e.preventDefault();
+            isDragging = true;
+        } else if (e.which === 3) {
+            e.preventDefault();
+            isErasing = true;
+        }
+    };
+    table.onmouseup = (e) => {
+        if (e.which === 1) {
+            e.preventDefault();
+            console.log(isDragging);
+            isDragging = false;
+        } else if (e.which === 3) {
+            e.preventDefault();
+            isErasing = false;
+        }
+    };
+
+})();
 
 
+function makeGrid(height, width) {
 
-
-
-
-
-function makeGrid(values) {
-    // Could have used #inputHeight, and #inputWeight This just gets the first and second index of values which is the submitted array of form size. 
-    // let height = values[0].value;
-    // let width = values[1].value;
-    // Makes a grid with the height and weight inputs. Could have used a nested for loop. 
-    const table = document.getElementById('pixelCanvas');
-    const colorPicker = document.getElementById('colorPicker');
-
+    let colorPicker = document.getElementById('colorPicker');
 
     for (let i = 0; i <= height; i++) {
-        const row = table.insertRow(i);
-        row.setAttribute('row', i);
+        let row = table.insertRow(i);
+        row.setAttribute('id', 'pixelCanvas row', i);
         for (let j = 0; j < width; j++) {
-            const cell = row.insertCell(j);
-            cell.setAttribute('cell', j);
+            let cell = row.insertCell(j);
+            cell.setAttribute('id', 'pixelCanvas cell', j);
             cell.addEventListener('mousedown', (e) => {
-                cell.style.backgroundColor = colorPicker.value;
-
+                if (e.which === 1) {
+                    startColoring(cell);
+                } else if (e.which === 3) {
+                    startErasing(cell);
+                }
             });
-            cell.addEventListener('mousemove', (e) => { //.mousemove
-                cell.style.backgroundColor = colorPicker.value;
-                isDragging = true;
+            cell.addEventListener('mouseover', (e) => {
+                if (isDragging) {
+                    startColoring(cell);
+                } else if (isErasing) {
+                    startErasing(cell);
+                }
             });
         }
     }
+}
 
-    // for (i = 1; i <= height; i++) {
-    //     $('table').append('<tr id="pixelCanvas"></tr>');
-    // }
-    // for (x = 1; x <= width; x++) {
-    //     $('tr').append('<td id="pixelCanvas"></td>');
-
-    // }
-
-    //Takes values from sizePicker and creates a table
-
-
+let startColoring = (cell) => {
+    cell.style.backgroundColor = colorPicker.value;
+}
+let startErasing = (cell) => {
+    cell.style.backgroundColor = 'transparent';
 }
 
 
-
-// $('#colorPicker').change(function () {
-//     color = $(this).val();
-//     return color; // returns the color from the #colorPicker, this being the colorpicker form
-// });
-
-let isDragging = false; // global for "double click" to paint instead of constant clicking 
-let isErasing = false;
-
-function paintStop() { // function to stop the mousemove painting. It uses .off('mousemove') at the end to turn the mousemove listener off. This was the first way I could figure out how to turn it off
-
-    $('td').mousemove(function () {}).off('mousemove');
-    console.log("turning off");
-    isDragging = false;
-}
-
-function eraseStop() { // function to stop the mousemove painting. It uses .off('mousemove') at the end to turn the mousemove listener off. This was the first way I could figure out how to turn it off
-
-    $('td').mousemove(function () {}).off('mousemove');
-    console.log("turning off");
-    isErasing = false;
-}
-//$('body').bind('touchstart', function () {}); // TESTING touchdevices
-
-$(function () {
-    // gets the dblclick from the 'table' and starts the mouse move which just changes the css property
-    $('table').on('dblclick touchstart', function (e) { //.dblclick(function ())
-
-        if (e.which === 3) {
-            return;
-        } else if (isDragging) {
-            paintStop();
-            isDragging = false;
-        } else
-            $('td').on('mousemove', function () { //.mousemove
-                $(this).css('background-color', color);
-                isDragging = true;
-            });
-    });
-});
+let border = true;
 
 
-// $('table').on('click touchstart', 'td', function () {
-//     console.log(this);
-//     $(this).css('background-color', color); // this is for just clicking, instead of moving and painting changes the color of this(being the td)
-// });
+document.getElementById('toggleBtn').addEventListener('click', toggleLines);
 
-// Nice!
-$('table').on('mousedown', 'td', function (event) {
+function toggleLines() {
 
-    if (event.which === 3) {
-        // event.preventDefault();     
-        // event.stopImmediatePropagation(); // not working, not sure why. Having to use contextmenu turn off
-        if (isErasing) {
-            eraseStop();
-            isErasing = false;
-        } else {
-            $('td').on('mousemove', function () {
-                $(this).css('background-color', '#000000');
-                isErasing = true;
-            });
+    if (border) {
+
+        let elements = document.querySelectorAll('#pixelCanvas *');
+        let count = elements.length;
+
+        while (count--) {
+            if (elements[count].style.border == "1px white");
+            elements[count].style.border = "none";
+
         }
+        border = false;
+
+    } else {
+        $('tr').remove();
+        makeGrid(35, 35);
+        border = true;
 
     }
-});
-
-function toggleLines() { // need to turn into toggle on and off
-    let canvasTable = $('table');
-    let canvasTd = $('td');
-    let canvasTr = $('tr');
-    $(canvasTable).css('border', 'none');
-    $(canvasTr).css('border', 'none');
-    $(canvasTd).css('border', 'none');
 }
 
-// let emptyCanvas = document.getElementById('pixelCanvas');  //// For saving canvas
-// console.log(emptyCanvas);
+
+
+
+// let emptyCanvas = document.getElementById('pixelCanvas'); //// For saving canvas
 // let savedArt = document.getElementById('savedArt');
 // $('#save').click(function () {
 //     toggleLines();
 
-//     html2canvas(emptyCanvas, {backgroundColor: 'white'}).then(canvas => {
+//     html2canvas(emptyCanvas, {
+//         backgroundColor: null
+//     }).then(canvas => {
 //         savedArt.appendChild(canvas);
 
 //     });
