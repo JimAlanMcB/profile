@@ -87,6 +87,9 @@ function makeGrid(height, width) {
 
 let startColoring = (cell) => {
     cell.style.backgroundColor = colorPicker.value;
+    cell.nextSibling.style.backgroundColor = colorPicker.value;
+    cell.previousSibling.style.backgroundColor = colorPicker.value;
+    cell.parentElement.style.backgroundColor = colorPicker.value;
 }
 let startErasing = (cell) => {
     cell.style.backgroundColor = 'transparent';
