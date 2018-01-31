@@ -166,7 +166,9 @@ function deletePhotos(){
 let emptyCanvas = document.getElementById('pixelCanvas'); //// For saving canvas
 let savedArt = document.getElementById('savedArt');
 $('#save').click(function () {
+    if(border === true){
     toggleLines();
+    }
     
 
     html2canvas(emptyCanvas, {
