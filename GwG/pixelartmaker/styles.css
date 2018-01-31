@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(0, 0, 0);
     color: #ffff00;
     text-shadow: 2px 1px 0px rgba(255, 0, 5, 0.84);
     background-image: url(bg.jpg);
@@ -146,30 +146,154 @@ input[type=submit]:hover {
 input:hover {
     cursor: pointer;
 }
-div{
+
+div {
     margin: 0 auto;
-    max-width: 200px;
     margin-bottom: 0.3em;
+    text-align: center;
+}
+
+.instruct {
+    max-width: 400px;
     text-align: left;
 }
-.bold_header{
-  
-   font-size: 40px;
+
+.bold_header {
+    font-size: 40px;
 }
+
 ul {
-    
     list-style-type: none;
-  }
-.saved_art{ 
-  width: 100%;
-  height: 270px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  padding: 0;
 }
-.saved_art canvas {
-    width: 65px !important;
+
+.saved_art {
+    width: 100%;
     padding: 0;
-    height: 65px !important;
+}
+
+.saved_art canvas {
+    height: 75px !important;
+    width: 75px !important;
+    padding: 0;
     margin: 5px 15px 5px 0;
-  }
+}
+
+.lightbox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.lightbox canvas {
+    width: 90vh !important;
+    height: 90vh !important;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+}
+
+#savedArt {
+    -webkit-transition: background 0.4s ease-out;
+    transition: background 0.4s ease-out;
+    display: inline-block;
+}
+
+#savedArt canvas {
+    -webkit-transition: margin 2s;
+    transition: margin 2s;
+}
+
+
+/* Dropdown Button */
+
+.dropbtn {
+    display: inherit;
+    color: rgb(255, 204, 0);
+    font-size: 20px;
+    padding: 2px;
+    width: 150px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background: rgb(177, 0, 0);
+    background: -moz-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -webkit-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -o-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -ms-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: linear-gradient(0deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    -webkit-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+}
+
+.dropbtn:hover {
+    cursor: pointer;
+    color: rgb(243, 255, 6);
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background: rgb(237, 178, 178);
+    background: -moz-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -webkit-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -o-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: -ms-linear-gradient(90deg, rgb(177, 0, 0) 51%, rgb(250, 20, 20) 0%);
+    background: linear-gradient(0deg, rgb(250, 20, 20) 0% rgb(177, 0, 0) 51%);
+    -webkit-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    -moz-box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+    box-shadow: 2px 1px 6px rgba(193, 50, 50, 1);
+}
+
+
+
+
+.dropdown {
+    margin: inherit;
+    max-width: 100px !important;
+    display: inline-table;
+    background-color: rgba(255, 0, 5, 0.84);
+}
+
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    text-align: left;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+
+.dropdown-content a:hover {
+    background-color: #f5ebb0
+}
+
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+.dropdown:hover .dropbtn {
+    background-color: #ff0000;
+}

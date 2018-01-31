@@ -3,6 +3,8 @@
 
 <head>
     <title>Pixel Art Maker!</title>
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
@@ -14,6 +16,7 @@
 </head>
 
 <body>
+
     <h1>Pixel Art Maker</h1>
 
 
@@ -22,35 +25,54 @@
         Grid Height:
         <input type="number" id="inputHeight" name="height" min="1" value="50"> Grid Width:
         <input type="number" id="inputWeight" name="width" min="1" value="50">
-
         <input type="submit" id="start" value="START">
     </form>
-
     <h2>Pick A Color</h2>
-    <!-- <input type="color" id="colorPicker" value="#ffff00"> -->
-    <input class="jscolor" id="colorPicker">
-    <!-- Using JScolor -->
+    <div>
+
+        <!-- <input type="color" id="colorPicker" value="#ffff00"> -->
+        <input class="jscolor" id="colorPicker">
+        <!-- Using JScolor -->
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Brush Size</button>
+
+
+        <div class="dropdown-content">
+            <button id='onePx' class="dropbtn">1 Block</button>
+            <button id='twoPx' class="dropbtn">2 Blocks</button>
+            <button id='threePx' class="dropbtn">3 Blocks</button>
+        </div>
+
+    </div>
+    <h3 id="bSizeMsgArea">Brush Size: 1 Block</h3>
+
 
 
     <h2 class="bold_header">Instructions:</h2>
-    <div>
-            
+    <div class="instruct">
+
         <ul>
             <li>1) Choose your color, Click Start, and click and drag to paint.</li>
-            <li>2) Right click to Erase!!</li>
-            <li>3) Toggle lines to toggle grid</li>
-            <li>4) Restart to...Restart</li>
-            <!-- <li>3) Click Save to Save your picture!</li> -->
+            <li>2) Choose your brush size!!!</li>
+            <li>3) Erase with right click!</li>
+            <li>4) Save your drawing! Click on it to expand!</li>
+            <li>5) Delete your drawings if needed!
+                <li>
+                    <li>6) Restart to...Restart</li>
+                    <!-- <li>3) Click Save to Save your picture!</li> -->
 
         </ul>
     </div>
 
     <button class="retroBtn" id="restart">RESTART</button>
     <button class="retroBtn starWarsBtn">STAR WARS</button>
-    <!-- <button id="save" class="retroBtn">SAVE</button>     -->
-    <button id="toggleBtn" class="retroBtn">TOGGLE LINES</button>     
-    <!-- <div id="savedArt" class="saved_art"></div> -->
+    <button id="save" class="retroBtn">SAVE</button>
+    <button onclick="deletePhotos()" class="retroBtn">DELETE DRAWINGS</button>
+    <button id="toggleBtn" class="retroBtn">TOGGLE LINES</button>
+
     <h2>Pixel Canvas</h2>
+    <div id="savedArt" class="saved_art"></div>
     <table id="pixelCanvas" oncontextmenu="return false;">
         <tbody>
 
@@ -3215,7 +3237,7 @@
         </a>
     </ul>
 
-    <script src="designsTEST.js"></script>
+    <script src="designsJS.js"></script>
     <script src="jscolor.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 

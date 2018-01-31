@@ -7,7 +7,7 @@ refactor
 */
 
 
-
+document.addEventListener('DOMContentLoaded', init);
 
 let color = colorPicker.value;
 let isDragging = false;
@@ -16,6 +16,7 @@ let table = document.getElementById('pixelCanvas');
 let sizeSelection = document.getElementById('start');
 let restartGrid = document.getElementById('restart');
 let gridLines = true;
+let brushSize = onePx;
 
 
 
@@ -28,10 +29,32 @@ let startGrid = () => {
     makeGrid(height, width);
 
 };
+
 sizeSelection.addEventListener('click', startGrid);
 restartGrid.addEventListener('click', startGrid);
 
-(function init() {
+let brushSizeOnePx = document.getElementById('onePx');
+let brushSizeTwoPx = document.getElementById('twoPx');
+let brushSizeThreePx = document.getElementById('threePx');
+
+
+function init() {
+
+    brushSizeOnePx.addEventListener('click', () => {
+        brushSize = onePx;
+        document.getElementById('bSizeMsgArea').innerHTML = "Brush Size: 1 block";
+        
+    });
+    brushSizeTwoPx.addEventListener('click', () => {
+        brushSize = twoPx;
+        document.getElementById('bSizeMsgArea').innerHTML = "Brush Size: 2 blocks";
+        
+    });
+    brushSizeThreePx.addEventListener('click', () => {
+        brushSize = threePx;
+        document.getElementById('bSizeMsgArea').innerHTML = "Brush Size: 3 blocks";
+        
+    });
 
     table.onmousedown = (e) => {
         if (e.which === 1) {
@@ -54,7 +77,10 @@ restartGrid.addEventListener('click', startGrid);
         }
     };
 
-})();
+}
+
+
+
 
 
 function makeGrid(height, width) {
@@ -86,10 +112,19 @@ function makeGrid(height, width) {
 }
 
 let startColoring = (cell) => {
-    cell.style.backgroundColor = colorPicker.value;
-    cell.nextSibling.style.backgroundColor = colorPicker.value;
-    cell.previousSibling.style.backgroundColor = colorPicker.value;
-    cell.parentElement.style.backgroundColor = colorPicker.value;
+
+    if (brushSize == onePx) {
+        cell.style.backgroundColor = colorPicker.value;
+    } else if (brushSize === twoPx) {
+        cell.style.backgroundColor = colorPicker.value;
+        cell.nextSibling.style.backgroundColor = colorPicker.value;
+    } else if (brushSize === threePx) {
+        cell.style.backgroundColor = colorPicker.value;
+        cell.nextSibling.style.backgroundColor = colorPicker.value;
+        cell.previousSibling.style.backgroundColor = colorPicker.value;
+        
+    }
+
 }
 let startErasing = (cell) => {
     cell.style.backgroundColor = 'transparent';
@@ -123,22 +158,33 @@ function toggleLines() {
     }
 }
 
+function deletePhotos(){
+   $('canvas').remove();
+}
 
 
+let emptyCanvas = document.getElementById('pixelCanvas'); //// For saving canvas
+let savedArt = document.getElementById('savedArt');
+$('#save').click(function () {
+    toggleLines();
+    
 
-// let emptyCanvas = document.getElementById('pixelCanvas'); //// For saving canvas
-// let savedArt = document.getElementById('savedArt');
-// $('#save').click(function () {
-//     toggleLines();
+    html2canvas(emptyCanvas, {
+        backgroundColor: null
+    }).then(canvas => {
+        savedArt.appendChild(canvas);
 
-//     html2canvas(emptyCanvas, {
-//         backgroundColor: null
-//     }).then(canvas => {
-//         savedArt.appendChild(canvas);
+    });
 
-//     });
+});
 
-// });
+let pictures = document.getElementById('savedArt');
+
+
+  pictures.addEventListener('click', function( e ){
+     this.classList.toggle('lightbox');
+  
+});
 
 // I painted a star wars default picture, and this just resets it if needed. 
 $('.starWarsBtn').click(function () {
