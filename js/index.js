@@ -70,7 +70,7 @@ target="_blank"><span class="fa fa-linkedin"></span></a>
    
 	<div class="col-xs-12">
 	   
-	   
+	  <a href="JimAlanResume.pdf">Download Cover Letter Resume</a>
 		<br>
 	  <a href="Jim-Mcbrayer.pdf">Download Resume</a>
 	  <br>
