@@ -215,7 +215,7 @@ portPage.innerHTML=`
 	
 	<div class="row">
 	<div class="col-lg-3">Pixel Art Maker
-	<p><a href="https://jimalanmcb.github.io/profile/GwG/pixelartmaker" target="_blank" id="port-link"><img src="images/pixelart.png" class="img-thumbnail"  alt="PixelArtMaker" width="304" height="236"></a></img>
+	<p><a href="https://jimalanmcb.github.io/profile/GwG/pixelartmaker" target="_blank" id="port-link"><img src="images/pixelart.PNG" class="img-thumbnail"  alt="PixelArtMaker" width="304" height="236"></a></img>
 	</p>
 	</div>
 	<div class="col-lg-3">TicTacToe
