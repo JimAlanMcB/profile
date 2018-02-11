@@ -60,7 +60,7 @@ resPage.innerHTML = `
 <h2>Web Developer</h2>
 
 <a class="btn btn-social-icon btn-lg btn-twitter" href="https://www.twitter.com/alancode" target="_blank"><span class="fa fa-twitter"></span></a>
-<a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.linkedin.com/in/alan-mcbrayer-1768a557/"
+<a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.linkedin.com/in/jimalanmcb/"
 target="_blank"><span class="fa fa-linkedin"></span></a>
 <a class="btn btn-social-icon btn-lg btn-github" href="https://jimalanmcb.github.io/profile" target="_blank"><span class="fa fa-github"></span></a>
 <a class="btn btn-social-icon btn-lg" href="mailto:alancode@gmail.com">
@@ -121,7 +121,7 @@ target="_blank"><span class="fa fa-linkedin"></span></a>
 	  <ul>
 		<h3>-Work Experience</h3>
 	  </ul>
-	  <li>Operations Manager Dogtopia 2017 New Store Openings</li>
+	  <li>Operations Manager / Developer / IT Support Dogtopia 2017 New Store Openings</li>
 	  <li>Restaurant General Manager - 2015-2017</li>
 	  <li>Regional Training and Development Manager - 2013-2015
 		<li>Retail-Co/Store Manager - 2010-2014 </li>
@@ -143,7 +143,7 @@ conPage.innerHTML = `<div id="contactme">
 <span class="fa fa-twitter"></span> </a></li>
   <li><a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.facebook.com" target="_blank">
 <span class="fa fa-facebook"></span></a></li>
-  <li><a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.linkedin.com/in/alan-mcbrayer-1768a557/"
+  <li><a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.linkedin.com/in/jimalanmcb/"
 	  target="_blank">
 <span class="fa fa-linkedin"></span></a></li>
   <li><a class="btn btn-social-icon btn-lg btn-github" href="https://jimalanmcb.github.io/profile" target="_blank">
@@ -158,7 +158,7 @@ conPage.innerHTML = `<div id="contactme">
 <ul>
   <li><a href="https://www.twitter.com/alancode">@alancode</a></li>
   <li><a href="https://www.facebook.com">alanmcbrayer86</a></li>
-  <li><a href="https://www.linkedin.com/in/jim-mcbrayer-1768a557/">jimalanmcb</a></li>
+  <li><a href="https://www.linkedin.com/in/jimalanmcb/">jimalanmcb</a></li>
 	<li><a href="https://jimalanmcb.github.io/profile">jimalanmcb.github.io</a></li>
 	<li><a href="https://github.com/JimAlanMcB">GitHub</a></li>
   <li><a href="https://codepen.io/alancode">alancode</a></li>
