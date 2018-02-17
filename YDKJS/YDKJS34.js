@@ -18,8 +18,8 @@ const accPrice = 39;
 
 let accTotal = accPrice * tax + accPrice;
 
-let balance = prompt('What is your back account balance?');
-
+//let balance = prompt('What is your bank account balance?');
+let balance = 1000;
 let totalTax = phonePrice * tax;
 let totalPrice = totalTax + phonePrice;
 
@@ -34,9 +34,9 @@ accountBalance.innerText = balance;
 
 purchaseAccBtn.addEventListener('click', purchaseAcc => {
     if (balance > accTotal) {
-        messageArea.innerText = 'You purchased accessories';
+        messageArea.innerText = ' You purchased accessories';
         balance -= accPrice;
-        accountBalance.innerText = balance;
+        accountBalance.innerText = ' ' + balance;
         console.log('acc purchased balance is ' + balance + '-' + accPrice);
     } 
     else {
@@ -49,19 +49,40 @@ purchaseAccBtn.addEventListener('click', purchaseAcc => {
 });
 
 purchasePhoneBtn.addEventListener('click', purchasePhone => {
-    messageArea.innerText = 'You purchased a phone';
+    if(balance > totalPrice){
+    messageArea.innerText = ' You purchased a phone';
     balance -= totalPrice;
     accountBalance.innerText = balance;
     console.log('phone purchased');
+    }
+    else {
+        messageArea.innerText = "You don't have enough money!!";
+        console.log('out of money');
+        return;
+    }
 });
 
-
-for (let i = 0; i < totalPrice; i++) {
-
-    // purchasePhone();
-    // purchaseAcc();
-
+let purchasePhone = () => {
+    if(balance > totalPrice){
+        messageArea.innerText = ' You purchased a phone';
+        balance -= totalPrice;
+        accountBalance.innerText = balance;
+        console.log('phone purchased');
+        }
+        else {
+            messageArea.innerText = "You don't have enough money!!";
+            console.log('out of money');
+            return;
+        }
 }
+
+
+// for (let i = 0; i < totalPrice; i++) {
+
+//      purchasePhone();
+//     // purchaseAcc();
+
+// }
 
 
 console.log(totalPrice);
