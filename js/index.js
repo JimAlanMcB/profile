@@ -198,7 +198,7 @@ portPage.innerHTML=`
 	  </div> -->
 
 		<div class="col-lg-3">Flawlessly Fresh Website
-		<p><a href="https://jimalanmcb.github.io/profile/FFWaterSite" target="_blank" id="port-link"><img src="images/ffwater.png" class="img-thumbnail" alt="FlawlessWater" width="304" height="236"></a></img>
+		<p><a href="https://jimalanmcb.github.io/profile/FFWaterSite" target="_blank" id="port-link"><img src="images/FFWater.png" class="img-thumbnail" alt="FlawlessWater" width="304" height="236"></a></img>
 		</p>
 		</div>
 

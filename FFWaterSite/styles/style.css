@@ -10,7 +10,7 @@ a {
 }
 
 span {
-    padding: 10px;
+    margin-top: 20px;
     height: 100px;
     width: 100%;
     display: block;
@@ -18,12 +18,8 @@ span {
 
 body {
     background: #667db6;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #4e4544;
     font-family: 'Roboto';
 }
@@ -46,6 +42,7 @@ body {
     border: 1px #4e4544;
     border-radius: 5px;
     margin: 5px auto;
+    padding: 10px;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas: "header header" "main sidebar" "footer footer";
@@ -60,29 +57,36 @@ a:hover {
 /* Header */
 
 header {
-    font-family: 'Lobster', cursive;
+    font-family: 'Tangerine', cursive;
+    font-size: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: fixed;
     top: 0;
     width: 100%;
     border: 1px solid #333333;
-    background-color: #357fc0;
+    background: #667db6;
+    background: -webkit-linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
+    background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
     color: #011821;
     padding: 0px;
     overflow: hidden;
-    line-height: 2em;
     letter-spacing: .5em;
 }
 
 header nav {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 5px;
     list-style: none;
 }
 
 header nav li {
-    margin-right: 15px;
     display: inline;
+}
+
+header nav li a {
+    font-family: 'Quicksand', cursive;
+    margin-right: 15px;
+    margin-top: 10px;
 }
 
 
@@ -94,12 +98,14 @@ header nav li {
 }
 
 .main h2 {
+    letter-spacing: .4em;
     font-size: 32px;
     margin-bottom: 55px;
 }
 
 .main p {
     margin-bottom: 50px;
+    letter-spacing: .2em;
 }
 
 .main img {
@@ -146,6 +152,7 @@ footer p {
 
 .bottom_footer p {
     margin-top: 10px;
+    font-family: 'Quicksand', cursive;
 }
 
 @media (max-width: 600px) {
@@ -153,5 +160,15 @@ footer p {
         /*  Redefine the grid into a single column layout. */
         grid-template-columns: 1fr;
         grid-template-areas: "header" "main" "sidebar" "footer";
+    }
+    header {
+        line-height: 1;
+        letter-spacing: '';
+    }
+    span {
+        height: 200px;
+    }
+    .bg {
+        background-attachment: scroll;
     }
 }
