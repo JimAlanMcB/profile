@@ -57,7 +57,7 @@ a:hover {
 /* Header */
 
 header {
-    font-family: 'Tangerine', cursive;
+    font-family: 'Oleo Script', cursive;
     font-size: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: fixed;
@@ -65,9 +65,8 @@ header {
     width: 100%;
     border: 1px solid #333333;
     background: #667db6;
-    background: -webkit-linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
-    background: linear-gradient(to bottom, #667db6, #0082c8, #0082c8, #667db6);
-    color: #011821;
+    
+    color: #9ee6f7;
     padding: 0px;
     overflow: hidden;
     letter-spacing: .5em;
@@ -163,7 +162,7 @@ footer p {
     }
     header {
         line-height: 1;
-        letter-spacing: '';
+        letter-spacing: .08em;
     }
     span {
         height: 200px;
