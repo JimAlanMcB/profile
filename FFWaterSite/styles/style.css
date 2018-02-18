@@ -58,7 +58,8 @@ a:hover {
 /* Header */
 
 header {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 100;
     font-size: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: fixed;
@@ -66,7 +67,7 @@ header {
     width: 100%;
     border: 1px solid #333333;
     background: #1e80c491;
-    color: #000000;
+    color: #ffffff;
     padding: 0px;
     overflow: hidden;
     letter-spacing: .5em;
@@ -166,7 +167,7 @@ footer p {
         margin-bottom: 2px;
     }
     span {
-        margin-top: 0px;
+        margin-top: 54px;
         height: 200px;
     }
     .bg {
