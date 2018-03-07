@@ -101,7 +101,7 @@ let init = function () {
 
 
 			game.load.image('bed', 'images/tiles/bed.png');
-			game.load.image('dresser', 'images/tiles/dresser.png');
+			game.load.image('dresser', 'images/tiles/Dresser.png');
 			game.load.image('clock', 'images/tiles/clock.png');
 			game.load.image('boss', 'images/tiles/boss.png');
 			game.load.image('bed2', 'images/tiles/bed2.png');
@@ -124,7 +124,7 @@ let init = function () {
 			game.load.image('wall', 'images/tiles/wall4.png');
 			game.load.image('wall2', 'images/tiles/wall5.png');
 
-			game.load.spritesheet('characterAnim', 'images/tiles/hero.png', 24, 32, 32);
+			game.load.spritesheet('characterAnim', 'images/tiles/Hero.png', 24, 32, 32);
 
 			game.time.advancedTiming = true;
 
