@@ -202,10 +202,10 @@ portPage.innerHTML=`
 		</p>
 		</div>
 
-		<div class="col-lg-3">Wiki Viewer
+		<!--<div class="col-lg-3">Wiki Viewer
 		<p><a href="https://codepen.io/alancode/full/ZJOaVg/" target="_blank" id="port-link"><img src="images/wiki.jpg" class="img-thumbnail" alt="Wiki Viewer" width="304" height="236"></a></img>
 		</p>
-		</div>
+		</div>-->
 		
 		<div class="col-lg-3">Simon Game
 		<p><a href="https://jimalanmcb.github.io/profile/Simon" target="_blank" id="port-link"><img src="images/simon.png" class="img-thumbnail"  alt="Simon" width="304" height="236"></a></img>
