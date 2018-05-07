@@ -235,13 +235,17 @@ portPage.innerHTML=`
 		<div class="col-lg-3">Murder Mystery Game
 		<p><a href="https://jimalanmcb.github.io/MurderMystery" target="_blank" id="port-link"><img src="images/murdermystery.png" class="img-thumbnail"  alt="murdermystery" width="304" height="236"></a></img>
 		</p>
-	  </div>
-
-	 
-
+		</div>
 	</div>
 	<!--row 2 end -->
-</div> <!-- container -- >
+	<div class="row">
+	<div class="col-lg-3">GwG Portfolio Mockup
+	<p><a href="https://jimalanmcb.github.io/GwG/GwGPortfolio" target="_blank" id="port-link"><img src="images/GwGportfoliomockup.PNG" class="img-thumbnail"  alt="gwgmockup" width="304" height="236"></a></img>
+	</p>
+	</div>
+	</div>
+
+	</div> <!-- container -- >
 `;
 
 var aboutPage = document.getElementById("about");
