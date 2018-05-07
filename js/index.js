@@ -231,6 +231,10 @@ portPage.innerHTML=`
 	<div class="col-lg-3">TicTacToe
 		<p><a href="https://jimalanmcb.github.io/profile/Tictactoe" target="_blank" id="port-link"><img src="images/tictactoe.png" class="img-thumbnail"  alt="TicTacToe" width="304" height="236"></a></img>
 		</p>
+		</div>
+		<div class="col-lg-3">Murder Mystery Game
+		<p><a href="https://jimalanmcb.github.io/MurderMystery" target="_blank" id="port-link"><img src="images/murdermystery.png" class="img-thumbnail"  alt="murdermystery" width="304" height="236"></a></img>
+		</p>
 	  </div>
 
 	 
