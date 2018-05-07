@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // object
+        let customer = {
+            name: "Jim",
+            speak: function () {
+                return "My name is " + this.name;
+            },
+
+            address: {
+                street: '123 main st',
+                city: 'hendersonville',
+                state: 'tn',
+            }
+        };
+
+        // console.log(customer.speak());
+        // document.write(customer.speak());
+
+        // constructor 
+        function Person(name, street) {
+            this.name = name;
+            this.street = street;
+
+            this.info = function(){
+                return 'my name is ' + this.name + ' and I live on ' + this.street;
+            };
+        }
+
+        let jim = new Person("Jim McBrayer", "1235 Main St");
+        document.write(jim.info() + "<br />");
+
+
+        function changeName(person){
+            person.name = "Jim McBrayer";
+        }
+
+        changeName(jim);
+
+        document.write("jim became " + jim.name)
+
+
+    </script>
+</body>
+
+</html>
