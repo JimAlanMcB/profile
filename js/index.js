@@ -240,7 +240,7 @@ portPage.innerHTML=`
 	<!--row 2 end -->
 	<div class="row">
 	<div class="col-lg-3">GwG Portfolio Mockup
-	<p><a href="https://jimalanmcb.github.io/GwG/GwGPortfolio" target="_blank" id="port-link"><img src="images/GwGportfoliomockup.PNG" class="img-thumbnail"  alt="gwgmockup" width="304" height="236"></a></img>
+	<p><a href="https://jimalanmcb.github.io/profile/GwG/GwGPortfolio/" target="_blank" id="port-link"><img src="images/GwGportfoliomockup.PNG" class="img-thumbnail"  alt="gwgmockup" width="304" height="236"></a></img>
 	</p>
 	</div>
 	</div>
