@@ -26,4 +26,4 @@ function buildTriangle(num){
     return result;
     
 }
-console.log(buildTriangle(10));
+console.log(buildTriangle(20));

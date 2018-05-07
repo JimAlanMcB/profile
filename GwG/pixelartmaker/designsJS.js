@@ -43,17 +43,17 @@ function init() {
     brushSizeOnePx.addEventListener('click', () => {
         brushSize = onePx;
         document.getElementById('bSizeMsgArea').innerHTML = "Brush Size: 1 block";
-        
+
     });
     brushSizeTwoPx.addEventListener('click', () => {
         brushSize = twoPx;
         document.getElementById('bSizeMsgArea').innerHTML = "Brush Size: 2 blocks";
-        
+
     });
     brushSizeThreePx.addEventListener('click', () => {
         brushSize = threePx;
         document.getElementById('bSizeMsgArea').innerHTML = "Brush Size: 3 blocks";
-        
+
     });
 
     table.onmousedown = (e) => {
@@ -122,7 +122,7 @@ let startColoring = (cell) => {
         cell.style.backgroundColor = colorPicker.value;
         cell.nextSibling.style.backgroundColor = colorPicker.value;
         cell.previousSibling.style.backgroundColor = colorPicker.value;
-        
+
     }
 
 }
@@ -158,18 +158,18 @@ function toggleLines() {
     }
 }
 
-function deletePhotos(){
-   $('canvas').remove();
+function deletePhotos() {
+    $('canvas').remove();
 }
 
 
 let emptyCanvas = document.getElementById('pixelCanvas'); //// For saving canvas
 let savedArt = document.getElementById('savedArt');
 $('#save').click(function () {
-    if(border === true){
-    toggleLines();
+    if (border === true) {
+        toggleLines();
     }
-    
+
 
     html2canvas(emptyCanvas, {
         backgroundColor: null
@@ -183,9 +183,9 @@ $('#save').click(function () {
 let pictures = document.getElementById('savedArt');
 
 
-  pictures.addEventListener('click', function( e ){
-     this.classList.toggle('lightbox');
-  
+pictures.addEventListener('click', function (e) {
+    this.classList.toggle('lightbox');
+
 });
 
 // I painted a star wars default picture, and this just resets it if needed. 

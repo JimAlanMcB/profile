@@ -92,35 +92,56 @@
  *   - Convert each odd number to the string "odd"
  */
 
-var numbers = [
-    [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
-    [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
-    [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
-    [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
-    [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
-    [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
-    [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
-    [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
-    [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
-    [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
-];
+// var numbers = [
+//     [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+//     [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+//     [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+//     [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+//     [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+//     [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+//     [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+//     [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+//     [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+//     [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+// ];
 
-// your code goes here
-// for(var i = 0; i < numbers.length; i++){
-//     for(var x = 0; x < numbers[i].length; x++){
-//         console.log(numbers[i][x]);
+// // your code goes here
+// // for(var i = 0; i < numbers.length; i++){
+// //     for(var x = 0; x < numbers[i].length; x++){
+// //         console.log(numbers[i][x]);
+// //     }
+// // }
+// // 
+// for(var x = 0; x < numbers.length; x++){
+//     for(var i = 0; i < numbers[x].length; i++){
+//         //console.log(numbers[x][i]);
+//         if(numbers[x][i] % 2 === 0){
+//             numbers[x][i] = "even";
+//         }
+//         else{
+//             numbers[x][i] = "odd";
+//        }
 //     }
 // }
-// 
-for(var x = 0; x < numbers.length; x++){
-    for(var i = 0; i < numbers[x].length; i++){
-        //console.log(numbers[x][i]);
-        if(numbers[x][i] % 2 === 0){
-            numbers[x][i] = "even";
-        }
-        else{
-            numbers[x][i] = "odd";
-       }
-    }
-}
-console.log(numbers);
+// console.log(numbers);
+
+import brain from 'brain';
+
+const trainingData = [
+  'Jane saw Doug.',
+  'Doug saw Jane.',
+  'Spot saw Doug and Jane looking at each other.',
+  'It was love at first sight, and Spot had a frontrow seat. It was a very special moment for all.'
+];
+
+const lstm = new brain.recurrent.LSTM();
+const result = lstm.train(trainingData, { iterations: 1500 });
+const run1 = lstm.run('Jane');
+const run2 = lstm.run('Doug');
+const run3 = lstm.run('Spot');
+const run4 = lstm.run('It');
+
+console.log('run 1: Jane' + run1);
+console.log('run 2: Doug' + run2);
+console.log('run 3: Spot' + run3);
+console.log('run 4: It' + run4);

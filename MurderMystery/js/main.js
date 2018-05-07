@@ -12,6 +12,10 @@ Possibly have to take clues to random NPC
 NPC's walking (Pathing)
 Insert RPG Elements
 
+(*(( Bugs - 
+After first round of timed, game over no longer works. 
+)))
+
 ...and more thoughts...
 
 
