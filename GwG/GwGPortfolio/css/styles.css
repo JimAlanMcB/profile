@@ -11,7 +11,6 @@ body {
     width: 900px;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 header {
@@ -85,6 +84,11 @@ a {
     margin-right: auto;
     margin-left: auto;
 }
+@media screen and (min-width: 900px){
+    .container{
+        letter-spacing: 0.8em;
+    }
+}
 
 @media screen and (max-width: 940px) {
     .container {
@@ -93,7 +97,7 @@ a {
         flex-direction: column;
         font-weight: bold;
         font-size: 20px
-        }
+    }
     .simongame {
         order: 3;
     }
@@ -115,7 +119,6 @@ a {
     .footer {
         order: 7;
     }
-    
 }
 
 @media screen and (max-width: 700px) and (min-width: 600px) {
@@ -128,7 +131,6 @@ a {
         margin-top: 8px;
         font-weight: bold;
         font-size: 20px;
-        
     }
     .links {
         width: 100%;
@@ -163,6 +165,4 @@ a {
     .footer {
         order: 7;
     }
-    
-   
 }
