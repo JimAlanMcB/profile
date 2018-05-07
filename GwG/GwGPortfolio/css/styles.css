@@ -84,8 +84,9 @@ a {
     margin-right: auto;
     margin-left: auto;
 }
-@media screen and (min-width: 900px){
-    .container{
+
+@media screen and (min-width: 900px) {
+    .container {
         letter-spacing: 0.8em;
     }
 }
