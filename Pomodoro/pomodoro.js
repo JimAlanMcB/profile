@@ -13,7 +13,7 @@ var totalTimeView = document.getElementById("totalTimeView");
 //-- total time view area--------------------------------------------------------------------
 
 var showTimeViewBtnMinus = document.getElementById("showTimeViewBtnMinus");
-showTimeViewBtnMinus.addEventListener("click", function(event) {
+showTimeViewBtnMinus.addEventListener("click", function (event) {
   clear();
   if (int < 1) {
     int = 1;
@@ -31,7 +31,7 @@ showTimeViewBtnMinus.addEventListener("click", function(event) {
 });
 
 var showTimeViewBtnPlus = document.getElementById("showTimeViewBtnPlus");
-showTimeViewBtnPlus.addEventListener("click", function(event) {
+showTimeViewBtnPlus.addEventListener("click", function (event) {
   clear();
   if (int < 1) {
     int = 1;
@@ -47,7 +47,7 @@ showTimeViewBtnPlus.addEventListener("click", function(event) {
   }
 });
 
-totalTimeView.addEventListener("click", function(event) {
+totalTimeView.addEventListener("click", function (event) {
   if (int === 0) {
     return;
   }
@@ -63,7 +63,7 @@ var breakTimeView = document.getElementById("breakTimeView");
 var bint = parseInt(document.getElementById("breakTimeView").textContent);
 
 var breakTimeViewBtnMinus = document.getElementById("breakTimeViewBtnMinus");
-breakTimeViewBtnMinus.addEventListener("click", function(event) {
+breakTimeViewBtnMinus.addEventListener("click", function (event) {
   // running = false;
   // clear();
   if (bint < 1) {
@@ -77,7 +77,7 @@ breakTimeViewBtnMinus.addEventListener("click", function(event) {
 });
 
 var breakTimeViewBtnPlus = document.getElementById("breakTimeViewBtnPlus");
-breakTimeViewBtnPlus.addEventListener("click", function(event) {
+breakTimeViewBtnPlus.addEventListener("click", function (event) {
   //running = false;
   //clear();
   if (bint < 1) {
@@ -92,14 +92,14 @@ breakTimeViewBtnPlus.addEventListener("click", function(event) {
 
 //--pause and resume buttons -----------------------------------------------------------------------
 var pauseBtn = document.getElementById("pauseBtn");
-pauseBtn.addEventListener("click", function(event) {
+pauseBtn.addEventListener("click", function (event) {
   document.getElementById("timerTitle").textContent = "Session Paused!";
   running = false;
   var per = 100;
 });
 
 var resumeBtn = document.getElementById("resumeBtn");
-resumeBtn.addEventListener("click", function(event) {
+resumeBtn.addEventListener("click", function (event) {
   running = true;
   document.getElementById("timerTitle").textContent = "Session Resumed!";
 });
@@ -112,7 +112,7 @@ function startTimer(duration, display) {
     minutes,
     seconds;
 
-  setInterval(function() {
+  setInterval(function () {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
@@ -146,7 +146,7 @@ function startBreak(duration, display) {
     minutes,
     seconds;
 
-  setInterval(function() {
+  setInterval(function () {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
@@ -173,15 +173,14 @@ function startBreak(duration, display) {
 
 function fillerup(int) {
   var per = 1;
-  setInterval(function() {
+  setInterval(function () {
     if (!running) {
       return;
     } else {
       per++;
       if (per <= 100) {
         $("#fillme").css({
-          background:
-            "linear-gradient(to top, #DF3232 " +
+          background: "linear-gradient(to top, #DF3232 " +
             per +
             "%,transparent " +
             per +
@@ -191,17 +190,17 @@ function fillerup(int) {
     }
   }, int * 600);
 }
+
 function breakerup(int) {
   var per = 1;
-  setInterval(function() {
+  setInterval(function () {
     if (!running) {
       return;
     } else {
       per++;
       if (per <= 100) {
         $("#fillme").css({
-          background:
-            "linear-gradient(to bottom, #519669 " +
+          background: "linear-gradient(to bottom, #519669 " +
             per +
             "%,transparent " +
             per +

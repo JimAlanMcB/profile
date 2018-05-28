@@ -243,6 +243,11 @@ portPage.innerHTML=`
 	<p><a href="https://jimalanmcb.github.io/profile/GwG/GwGPortfolio/" target="_blank" id="port-link"><img src="images/GwGportfoliomockup.PNG" class="img-thumbnail"  alt="gwgmockup" width="304" height="236"></a></img>
 	</p>
 	</div>
+	<div class="col-lg-3">Flippin' Card Game
+	<p><a href="https://jimalanmcb.github.io/flipcard" target="_blank" id="port-link"><img src="images/FlippinCards.PNG" class="img-thumbnail"  alt="flippincards" width="304" height="236"></a></img>
+	</p>
+	</div>
+
 	</div>
 
 	</div> <!-- container -- >

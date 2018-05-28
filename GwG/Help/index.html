@@ -9,8 +9,21 @@
 </head>
 
 <body>
+<button class="deck">Test Deck</button>
+<script>
+document.querySelector('.deck').addEventListener('click', () => {
+    console.log(event.target); // Default parameter?
+    console.log('test');
+    checkCard();  
+  });
+  
+  function checkCard() {
+      console.log(event.target);
+    
+      }
+ 
 
-
+</script>
     <script>
         // object
         let customer = {
