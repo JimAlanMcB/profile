@@ -154,7 +154,6 @@ conPage.innerHTML = `<div id="contactme">
 	  <span class="fa fa-envelope-o"></span></a></li>
 </ul>
 <ul>
-  <li><a href="https://www.twitter.com/alancode">@alancode</a></li>
   <li><a href="https://www.facebook.com">alanmcbrayer86</a></li>
   <li><a href="https://www.linkedin.com/in/jimalanmcb/">jimalanmcb</a></li>
 	<li><a href="https://jimalanmcb.github.io/profile">jimalanmcb.github.io</a></li>
