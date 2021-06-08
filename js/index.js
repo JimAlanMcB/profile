@@ -59,7 +59,7 @@ resPage.innerHTML = `
 <h1>Jim McBrayer</h1>
 <h2>Web Developer</h2>
 
-<a class="btn btn-social-icon btn-lg btn-twitter" href="https://www.twitter.com/alancode" target="_blank"><span class="fa fa-twitter"></span></a>
+
 <a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.linkedin.com/in/jimalanmcb/"
 target="_blank"><span class="fa fa-linkedin"></span></a>
 <a class="btn btn-social-icon btn-lg btn-github" href="https://jimalanmcb.github.io/profile" target="_blank"><span class="fa fa-github"></span></a>
@@ -138,9 +138,7 @@ conPage.innerHTML = `<div id="contactme">
 <p>Hey there! Here are some various links and or social media accounts if you would like to check them out or get
   in touch!</p>
 
-<ul>
-  <li> <a class="btn btn-social-icon btn-lg btn-twitter" href="https://www.twitter.com/alancode" target="_blank">
-<span class="fa fa-twitter"></span> </a></li>
+
   <li><a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.facebook.com" target="_blank">
 <span class="fa fa-facebook"></span></a></li>
   <li><a class="btn btn-social-icon btn-lg btn-linkedin" href="https://www.linkedin.com/in/jimalanmcb/"
